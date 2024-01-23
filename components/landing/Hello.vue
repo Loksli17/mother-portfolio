@@ -10,18 +10,37 @@
 
     <div class=" 
         min-h-screen 
-        grid grid-cols-[1fr_775px] 
+        grid grid-cols-[1fr_850px] 
 
-        gap-[40px]
+        gap-[50px]
         w-1750:grid-cols-[1fr_680px]
-        w-1450:grid-cols-[1fr_550px]
+        w-1450:grid-cols-[1fr_605px]
         
         w-1280:grid-cols-1 
-        w-1280:gap-[40px] 
         overflow-hidden
     ">
 
-        <div class="grid auto-rows-max grid-rows-[max-content_1fr_max-content] w-1280:order-last pt-[130px] w-1280:pt-[0px] pl-[80px] pb-[80px] box-border">
+        <div class=" 
+            grid 
+            auto-rows-max 
+            grid-rows-[max-content_1fr_max-content]
+            pt-[130px]
+            pl-[80px]
+            pb-[80px]
+            box-border
+            
+            w-1280:order-last 
+            w-1280:pt-[0px]
+            w-1280:pr-[80px]
+            w-1280:pb-[0px]
+
+            w-1024:pl-[50px]
+            w-1024:pr-[50px]
+
+            w-640:pl-[30px]
+            w-640:pb-[30px]
+            w-640:pr-[30px]
+        ">
 
             <div>
 
@@ -75,11 +94,41 @@
 
         </div>
 
-        <div class="pr-[80px] box-border grid items-center justify-center grid-cols-[75%] w-1280:pt-[130px] w-1280:grid-cols-1 w-1280:pl-[80px]">
+        <div class="
+            pr-[80px] 
+            box-border 
+            grid items-center 
+            justify-center 
+            grid-cols-[75%] 
+            
+            w-1280:pt-[130px]
+            w-1280:grid-cols-[50%] 
+            w-1280:pl-[80px]
+            w-1280:pb-[0px]
+
+            w-1024:pt-[110px]
+            w-1024:grid-cols-[70%] 
+            w-1024:pl-[50px]
+            w-1024:pr-[50px]
+
+            w-640:grid-cols-1
+            w-640:pl-[30px]
+            w-640:pr-[30px]
+        ">
             
             <div class="relative">
                 
-                <img class="rounded-[160px] w-1520:rounded-[110px] w-1280:rounded-[70px] bg-[#D4FCFF]" src="assets/img/women.png" alt="">
+                <img 
+                    class="
+                        rounded-[120px] 
+                        w-1520:rounded-[90px] 
+                        w-1280:rounded-[60px] 
+                        w-1024:rounded-[40px]
+                        bg-[#D4FCFF]
+                    " 
+                    src="assets/img/women.png" 
+                    alt=""
+                >
                 
                 <PointsBox 
                     class="absolute bottom-[-58px] left-[120px] -z-10 w-1280:hidden" 

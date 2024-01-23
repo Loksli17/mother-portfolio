@@ -20,6 +20,9 @@
         grid-cols-[1fr_max-content]
         w-1024:h-[60px]
         z-10
+
+        w-1024:rounded-bl-[10px]
+        w-1024:rounded-br-[10px]
     ">
 
         <div class="w-1024:hidden grid gap-14 grid-flow-col auto-cols-max">
