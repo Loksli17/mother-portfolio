@@ -1,0 +1,7 @@
+
+
+<template>
+
+    Banner
+
+</template>

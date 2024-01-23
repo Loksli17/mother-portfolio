@@ -1,6 +1,8 @@
 
 <script setup lang="ts">
 
+    import H2 from '../global/H2.vue';
+
     interface ITool
     {
         img : string;
@@ -36,12 +38,14 @@
         grid
         grid-cols-[1040px_1fr]
         min-h-screen
+        pt-[40px]
+        box-border
 
         w-1750:grid-cols-[920px_1fr]
         w-1520:grid-cols-[820px_1fr]
         w-1280:grid-cols-[700px_1fr]
         w-1024:grid-cols-1
-    
+
         w-1024:pl-[50px]
         w-1024:pb-[50px]
         w-1024:pr-[50px]
@@ -56,28 +60,20 @@
         </div>
 
 
-        <div class="grid gap-14 w-1024:gap-10 w-640:gap-6 auto-rows-max content-center">
+        <div class="grid gap-12 w-1024:gap-10 w-640:gap-6 auto-rows-max content-center">
 
-            <h2 class=" 
-                font-bold 
-                text-[54px] 
-            
-                w-1280:text-[45px]
-                w-1024:text-[35px]
-                w-640:text-[30px]
-            ">
-                Обо мне
-            </h2>
-
+            <H2 :text="'Обо мне'"></H2>
 
             <div class="
-                text-[30px]
+                text-[28px]
                 max-w-[630px]
 
                 w-1750:max-w-auto
-                w-1280:text-[27px]
-                w-1024:text-[22px]
-                w-640:text-[19px]
+
+                w-1750:text-[26px]
+                w-1520:text-[22px]
+                w-1280:text-[20px]
+                w-1024:text-[18px]
             ">
 
                 <p>
@@ -91,7 +87,7 @@
             </div>
 
 
-            <div>
+            <div class="grid gap-6 w-1024:gap-3">
 
                 <h2 class=" 
                     font-bold 
@@ -104,10 +100,14 @@
                     Инструменты
                 </h2>
 
-                <div v-for="tool in tools">
+                <div>
 
-                    {{  tool.name }}
+                    <div v-for="tool in tools">
 
+                        {{  tool.name }}
+
+                    </div>
+                
                 </div>
 
             </div>

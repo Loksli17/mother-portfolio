@@ -1,6 +1,7 @@
 
 <script setup lang="ts">
 
+    import H2 from '../global/H2.vue';
 
 </script>
 
@@ -47,29 +48,10 @@
 
             <div>
 
-                <PointsBox :cols-amount="7" :rows-amount="3" :bg-name="'bg-default'"></PointsBox>
+                <PointsBox :cols-amount="7" :rows-amount="3"></PointsBox>
                 
-                <h2 class=" 
-                    font-bold 
-                    text-[54px] 
-                    
-                    w-1280:text-[45px]
-                    w-1024:text-[35px]
-                    w-640:text-[30px]
-                ">
-                    Видеомонтаж
-                </h2>
-
-                <h2 class=" 
-                    font-bold 
-                    text-[54px] 
-                    
-                    w-1280:text-[45px]
-                    w-1024:text-[35px]
-                    w-640:text-[30px]
-                ">
-                    Графический дизайн
-                </h2>
+                <H2 :text="'Видеомонтаж'"></H2>
+                <H2 :text="'Графический дизайн'"></H2>
 
             </div>
 
