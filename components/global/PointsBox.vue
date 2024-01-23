@@ -17,7 +17,7 @@
 
             <div v-for="j in props.colsAmount">
 
-                <div class=" bg-slate-400 w-[10px] h-[10px] rounded-[5px] ">
+                <div class=" bg-default w-[10px] h-[10px] rounded-[5px] ">
                     
                 </div>
 
