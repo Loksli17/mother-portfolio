@@ -9,6 +9,8 @@
 
 <template>
 
+    <Menu></Menu>
+
     <Hello/>
 
 </template>
