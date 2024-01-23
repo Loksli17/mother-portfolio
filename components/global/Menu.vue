@@ -19,6 +19,7 @@
         content-center
         grid-cols-[1fr_max-content]
         w-1024:h-[60px]
+        z-10
     ">
 
         <div class="w-1024:hidden grid gap-14 grid-flow-col auto-cols-max">
@@ -27,6 +28,8 @@
             <NuxtLink class=" text-[22px] "> Примеры работ </NuxtLink>
             <NuxtLink class=" text-[22px] "> Контакты </NuxtLink>
         </div>
+
+        <div class="hidden w:1024:grid "></div>
 
         <div class="grid grid-cols-[40px_40px] gap-[30px]">
 

@@ -31,7 +31,9 @@ export default {
         },
 
         screens: {
+            'w-1750': {max: '1750px'},
             'w-1520': {max: '1520px'},
+            'w-1450': {max: '1450px'},
             'w-1280': {max: '1280px'},
             'w-1024': {max: '1024px'},
             'w-640' : {max: '640px'},

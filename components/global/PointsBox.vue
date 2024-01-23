@@ -1,10 +1,18 @@
 
 <script setup lang="ts">
 
-    const props = defineProps<{
-        rowsAmount: number,
-        colsAmount: number,
-    }>();
+    const props = withDefaults(
+        defineProps<{
+            rowsAmount: number,
+            colsAmount: number,
+            background: string,
+            opacity   : number,
+        }>(),
+        {
+            background: '#92F8FF',
+            opacity   : 1,
+        }
+    );
 
 </script>
 
@@ -17,7 +25,7 @@
 
             <div v-for="j in props.colsAmount">
 
-                <div class=" bg-default w-[10px] h-[10px] rounded-[5px] ">
+                <div :style="{background, opacity}" class=" w-[10px] h-[10px] rounded-[5px] ">
                     
                 </div>
 
