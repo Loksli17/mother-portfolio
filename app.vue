@@ -1,5 +1,7 @@
 <template>
-  <div>
-    <NuxtWelcome />
-  </div>
+    
+    <div class="font-Roboto">
+        <NuxtPage />
+    </div>
+
 </template>
