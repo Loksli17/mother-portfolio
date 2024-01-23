@@ -59,6 +59,7 @@
             <div class="grid auto-rows-max content-center gap-6 w-1024:gap-5">
 
                 <div>
+                    
                     <h3 class=" 
                         font-medium 
                         text-[36px]
