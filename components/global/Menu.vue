@@ -1,7 +1,6 @@
 
 <script setup lang="ts">
 
-
 </script>
 
 
@@ -22,11 +21,22 @@
         w-1024:h-[60px]
     ">
 
-        <div class="w-1024:hidden ">
-            <NuxtLink class=" text-[24px]"> Приветствие </NuxtLink>
+        <div class="w-1024:hidden grid gap-14 grid-flow-col auto-cols-max">
+            <NuxtLink class=" text-[22px] "> Приветствие </NuxtLink>
+            <NuxtLink class=" text-[22px] "> Обо мне </NuxtLink>
+            <NuxtLink class=" text-[22px] "> Примеры работ </NuxtLink>
+            <NuxtLink class=" text-[22px] "> Контакты </NuxtLink>
         </div>
 
-        <div class="">
+        <div class="grid grid-cols-[40px_40px] gap-[30px]">
+
+            <div>
+                <img src="assets/img/tg.png"/>
+            </div>
+
+            <div>
+                <img src="assets/img/mail.png"/>
+            </div>
             
         </div>
     
