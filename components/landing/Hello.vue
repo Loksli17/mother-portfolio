@@ -8,7 +8,7 @@
 
 <template>
 
-    <div class=" 
+    <div class="
         min-h-screen 
         grid grid-cols-[1fr_850px] 
 
@@ -18,6 +18,7 @@
         
         w-1280:grid-cols-1 
         overflow-hidden
+        relative
     ">
 
         <div class=" 
@@ -32,9 +33,11 @@
             w-1280:order-last 
             w-1280:pt-[0px]
             w-1280:pr-[80px]
-            w-1280:pb-[0px]
+            w-1280:pb-[80px]
+            w-1280:gap-[40px]
 
             w-1024:pl-[50px]
+            w-640:pb-[50px]
             w-1024:pr-[50px]
 
             w-640:pl-[30px]
@@ -46,28 +49,74 @@
 
                 <PointsBox :cols-amount="7" :rows-amount="3" :bg-name="'bg-default'"></PointsBox>
                 
-                <h2 class=" font-bold text-[54px] w-1280:text-[45px]">
+                <h2 class=" 
+                    font-bold 
+                    text-[54px] 
+                    
+                    w-1280:text-[45px]
+                    w-1024:text-[35px]
+                    w-640:text-[30px]
+                ">
                     Видеомонтаж
                 </h2>
 
-                <h2 class=" font-bold text-[54px] w-1280:text-[45px]">
+                <h2 class=" 
+                    font-bold 
+                    text-[54px] 
+                    
+                    w-1280:text-[45px]
+                    w-1024:text-[35px]
+                    w-640:text-[30px]
+                ">
                     Графический дизайн
                 </h2>
 
             </div>
 
 
-            <div class="grid auto-rows-max content-center gap-6">
+            <div class="grid auto-rows-max content-center gap-6 w-1024:gap-5">
 
                 <div>
-                    <h3 class=" font-medium text-[36px] w-1280:text-[30px]" >
+                    <h3 class=" 
+                        font-medium 
+                        text-[36px]
+
+                        w-1280:text-[30px]
+                        w-1024:text-[27px]
+                        w-640:text-[22px]
+                        
+                    ">
                         Здравствуйте, меня зовут 
                     </h3>
 
-                    <h3 class=" font-bold text-[36px] w-1280:text-[30px] text-[#009CA6]"> Светлана Мишина </h3>
+                    <h3 class=" 
+                        font-bold 
+                        text-[36px]
+
+                        w-1280:text-[30px]
+                        w-1024:text-[27px]
+                        w-640:text-[22px] 
+
+                        text-[#009CA6]
+                    "> 
+                        Светлана Мишина 
+                    </h3>
+
                 </div>
 
-                <div class="text-[28px] w-[800px] w-1520:w-[600px] w-1280:text-[24px] w-1280:w-full">
+                <div class="
+                    text-[28px] 
+                    w-[800px] 
+                    
+                    w-1520:w-[600px]
+
+                    w-1280:text-[24px] 
+                    w-1280:w-full
+
+                    w-1024:text-[21px]
+
+                    w-640:text-[19px]
+                ">
                     Я графический дизайнер и видеомонтажер с большим опытом создания видеороликов и рекламной продукции для бизнеса
                 </div>
 
@@ -80,7 +129,13 @@
                     rounded-[10px]
                     hover:bg-default-hover
                     transition-all
+
                     w-1280:text-[26px]
+                    w-1280:px-[32px]
+
+                    w-1024:text-[22px]
+                    w-1024:px-[25px]
+                    w-1024:py-[8px]
                 "> 
                         Cвязаться 
                 </button>
@@ -88,7 +143,14 @@
             </div>
 
 
-            <div  class=" font-medium text-[27px]">
+            <div class=" 
+                font-medium 
+                text-[27px]
+
+                w-1280:text-[24px]
+                w-1024:text-[20px]
+                w-640:text-[18px] 
+            ">
                 г. Хабаровск
             </div>
 
@@ -140,6 +202,22 @@
             
             </div>
             
+        </div>
+
+        <div class="
+            absolute 
+            w-[360px] 
+            h-[360px] 
+            border-[20px] 
+            rounded-[180px] 
+            bottom-[-220px] 
+            right-[-140px] 
+            border-[#92F8FF] 
+            
+            w-1024:right-[-190px]
+            w-1024:bottom-[-250px]
+        ">
+
         </div>
 
     </div>
