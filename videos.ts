@@ -12,20 +12,32 @@ const videos: Array<IVideo> = [
     {
         name: 'Амур Пасифик. Рыболовный промысел',
         file: 'amur-pac.mp4',
-        tags: ['15 сек', '2d анимация', 'Видеомонтаж'],
+        tags: ['15 сек', '2d анимация', 'Видеомонтаж' ],
         preview: 'amur-pac.jpg',
     },
     {
-        name: 'Рекламный ролик для gloria jeans',
-        file: 'test.mp4',
-        tags: ['20 сек', '2d анимация'],
-        preview: 'preview.png',
+        name: 'Виктория. Женская одежда',
+        file: 'victoria.mp4',
+        tags: ['10 сек', '2d анимация', 'Модель'],
+        preview: 'victoria.jpg',
     },
     {
-        name: 'Рекламный ролик для gloria jeans',
-        file: 'test.mp4',
-        tags: ['20 сек', '2d анимация'],
-        preview: 'preview.png',
+        name: 'Гидролюкс. Сеть инжерных магазинов',
+        file: 'gidro.mp4',
+        tags: ['15 сек', '2d анимация', 'Видеомонтаж'],
+        preview: 'gidro.jpg',
+    },
+    {
+        name: 'Индиго сити. Магазин детской одежды',
+        file: 'indigo.mp4',
+        tags: ['15 сек', '2d анимация', 'Видеомонтаж'],
+        preview: 'indigo.jpg',
+    },
+    {
+        name: 'Наше дело. Маскот. Магазины обуви',
+        file: 'nashedelo.mp4',
+        tags: ['15 сек', '2d анимация', 'Инфографика'],
+        preview: 'nashedelo.jpg',
     }
 ];
 
