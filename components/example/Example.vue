@@ -4,14 +4,14 @@
     import H2  from '../global/H2.vue';
     import Tab from '../example/Tab.vue';
 
-    import BannerWrapper from '../example/wrappers/BannerWrapper.vue';
-    import LogoWrapper   from '../example/wrappers/LogoWrapper.vue';
-    import VideoWrapper  from '../example/wrappers/VideoWrapper.vue';
+    import BannerWrapper from '../example/Wrappers/BannerWrapper.vue';
+    import LogoWrapper   from '../example/Wrappers/LogoWrapper.vue';
+    import VideoWrapper  from '../example/Wrappers/VideoWrapper.vue';
+    
+    import type { TabType } from '~/types';
 
 
-
-    export type TabType = 'Video' | 'Banner' | 'Logo';
-
+    
     const typeToComponent: Record<TabType, any> = 
     {
         'Banner': BannerWrapper,

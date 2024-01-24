@@ -4,7 +4,7 @@
     import H2 from '../global/H2.vue';
 
 </script>
-
+ 
 
 
 <template>

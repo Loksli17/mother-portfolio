@@ -1,7 +1,10 @@
 
 <script setup lang="ts">
+    
+    import type { TabType } from '~/types';
 
-    const props = defineProps<{
+    
+    defineProps<{
         text     : string,
         activeTab: TabType,
         tabType  : TabType,
