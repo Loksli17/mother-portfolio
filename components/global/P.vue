@@ -19,9 +19,7 @@
         w-1280:text-[24px] 
         w-1280:w-full
 
-        w-1024:text-[21px]
-
-        w-640:text-[19px]
+        w-640:text-[21px]
     ">
         {{ text }}
     </p>

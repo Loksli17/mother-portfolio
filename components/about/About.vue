@@ -36,28 +36,111 @@
 <template>
 
     <div class=" 
-        bg-default-50 
+        bg-default-50
         grid
-        grid-cols-[1040px_1fr]
+        grid-cols-[700px_1fr]
+        gap-[60px]
         min-h-screen
         pt-[40px]
         box-border
 
-        w-1750:grid-cols-[920px_1fr]
-        w-1520:grid-cols-[820px_1fr]
-        w-1280:grid-cols-[700px_1fr]
+        w-1750:grid-cols-[600px_1fr]
+        w-1520:grid-cols-[540px_1fr]
+        w-1450:grid-cols-[500px_1fr]
+        w-1280:grid-cols-[390px_1fr]
         w-1024:grid-cols-1
 
         w-1024:pl-[50px]
         w-1024:pb-[50px]
         w-1024:pr-[50px]
+        w-1024:pt-[90px]
+        w-1024:gap-[100px]
 
         w-640:pl-[30px]
-        w-640:pb-[30px]
         w-640:pr-[30px]
     ">
 
-        <div>
+        <div class="
+            grid justify-end content-center grid-cols-[75%]
+            w-1024:justify-center w-1024:grid-cols-[55%]
+            w-750:grid-cols-[68%]
+            w-640:grid-cols-[80%]
+        ">
+            <div class="relative">
+                <img 
+                    class="
+                        rounded-[50px]
+                        w-1024:rounded-[30px] 
+                        bg-default
+                    " 
+                    src="assets/img/women.png" 
+                    alt=""
+                />
+
+                <div class=" 
+                    grid 
+                    text-center 
+                    absolute
+                    text-[35px]  
+                    bg-white 
+                    py-6
+                    px-10
+                    top-[-110px] 
+                    left-[-100px]
+                    rounded-[50px]
+                    font-medium
+
+                    w-1520:py-4
+                    w-1520:px-7
+                    w-1520:text-[26px]
+                    w-1520:rounded-[35px] 
+                    w-1520:left-[-70px]
+                    w-1520:top-[-90px]
+
+                    w-1280:py-3
+                    w-1280:px-6
+                    w-1280:text-[22px]
+                    w-1280:rounded-[25px] 
+                    w-1280:left-[-50px]
+                    w-1280:top-[-60px]
+                ">
+                    <div class=" text-[54px] w-1520:text-[39px] w-1280:text-[32px] font-semibold text-[#00D6E3]">25</div> 
+                    <div> лет </div> 
+                    <div class=" leading-8"> опыта </div>
+                </div>
+
+                <PointsBox 
+                    class="absolute bottom-[198px] left-[-90px] -z-10" 
+                    :cols-amount="6" 
+                    :rows-amount="9"
+                >
+                </PointsBox>
+
+                <div class=" 
+                    grid 
+                    absolute 
+                    text-[35px] 
+                    bg-white 
+                    p-7 
+                    bottom-[-50px] 
+                    left-[-40px]
+                    rounded-[40px]
+                    font-medium
+
+                    w-1520:p-5
+                    w-1520:text-[26px]
+                    w-1520:rounded-[25px] 
+                    w-1520:left-[-40px]
+                    w-1520:bottom-[-50px]
+
+                    w-1280:text-[21px]
+                ">
+                    <div class=" leading-10 w-1280:leading-7">Владение различными</div> 
+                    <div class=" leading-10 w-1280:leading-7">навыками</div>
+                </div>
+
+            </div>
+            
 
         </div>
 

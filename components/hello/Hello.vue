@@ -45,7 +45,6 @@
             w-1024:pr-[50px]
 
             w-640:pl-[30px]
-            w-640:pb-[30px]
             w-640:pr-[30px]
         ">
 
@@ -81,8 +80,8 @@
                 text-[27px]
 
                 w-1280:text-[24px]
-                w-1024:text-[20px]
-                w-640:text-[18px] 
+                w-1024:text-[22px]
+                w-640:text-[20px] 
             ">
                 г. Хабаровск
             </div>
@@ -119,7 +118,7 @@
                         w-1520:rounded-[90px] 
                         w-1280:rounded-[60px] 
                         w-1024:rounded-[40px]
-                        bg-[#D4FCFF]
+                        bg-[#E1FDFF]
                     " 
                     src="assets/img/women.png" 
                     alt=""
@@ -142,8 +141,9 @@
             class="
                 bottom-[-220px] 
                 right-[-140px] 
-                w-1024:right-[-225px] 
-                w-1024:bottom-[-215px]
+                w-1024:right-[-285px] 
+                w-1024:bottom-[-160px]
+                w-1024:opacity-30
             "
         />
 
