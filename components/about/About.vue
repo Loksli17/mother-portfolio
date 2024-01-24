@@ -88,15 +88,19 @@
 
                 <H3 :text="'Инструменты'"></H3>
 
-                <div class="grid grid-flow-col auto-cols-[90px] gap-[30px] w-1024:auto-cols-[60px] w-1024:gap-[15px]">
+                <ClientOnly>
 
-                    <div v-for="tool in tools">
+                    <div class="grid grid-flow-col auto-cols-[85px] gap-[30px] w-1024:auto-cols-[50px] w-1024:gap-[18px]">
 
-                        <img :alt="tool.name" :title="tool.name" :src="`/_nuxt/assets/img/${tool.img}`"/>
+                        <div v-for="tool in tools">
 
-                    </div>
+                            <img :alt="tool.name" :title="tool.name" :src="useImgUrl(tool.img)"/>
+
+                        </div>
                 
-                </div>
+                    </div>
+
+                </ClientOnly>
 
             </div>
 
