@@ -8,23 +8,27 @@
     const videos: Array<IVideo> = [
         {
             name: 'Рекламный ролик для gloria jeans',
-            file: '',
+            file: 'test.mp4',
             tags: ['20сек', '2d анимация'],
+            preview: 'preview.png',
         },
         {
             name: 'Рекламный ролик для gloria jeans',
-            file: '',
+            file: 'test.mp4',
             tags: ['20сек', '2d анимация'],
+            preview: 'preview.png',
         },
         {
             name: 'Рекламный ролик для gloria jeans',
-            file: '',
+            file: 'test.mp4',
             tags: ['20сек', '2d анимация'],
+            preview: 'preview.png',
         },
         {
             name: 'Рекламный ролик для gloria jeans',
-            file: '',
+            file: 'test.mp4',
             tags: ['20сек', '2d анимация'],
+            preview: 'preview.png',
         }
     ];
 
@@ -35,12 +39,11 @@
 
     <div class="
         grid 
-        gap-14 
+        gap-12
         grid-cols-repeat-min-540
-        w-1520:grid-cols-repeat-min-440 
-        w-1024:grid-cols-repeat-min-320
-        w-1280:gap-11 
-        w-1024:gap-8
+        w-1520:grid-cols-repeat-min-320
+        w-1280:gap-10 
+        w-1024:gap-6
     ">
         
         <VideoItem v-for="video in videos" :video="video"></VideoItem>
