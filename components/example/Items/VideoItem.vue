@@ -15,20 +15,24 @@
 
 <template>
 
-    <div class=" bg-default rounded-[10px]">
+    <div class="">
 
 
         <div>
-            <VueVideoPlayer 
-                class="w-full h-[300px]" 
-                :src="useVideoUrl(video.file)"
-                :poster="useImgUrl(video.preview)"
-                controls
-            >
-            </VueVideoPlayer>
+
+            <ClientOnly>
+
+                <video controls muted class="w-full h-[280px] bg-black rounded-t-[10px]" :poster="useImgUrl(video.preview)">
+
+                    <source :src="useVideoUrl(video.file)" type="video/mp4" />
+
+                </video>
+
+            </ClientOnly>
+
         </div>
 
-        <div class="p-7 grid gap-5 w-1024:p-4">
+        <div class="p-7 grid gap-5 w-1024:p-4 bg-default rounded-b-[10px] ">
 
             <div class=" text-[25px] w-1024:text-[20px]">
                 {{ video.name }}
