@@ -3,10 +3,10 @@
 
     const props = withDefaults(
         defineProps<{
-            rowsAmount: number,
-            colsAmount: number,
-            background: string,
-            opacity   : number,
+            rowsAmount : number,
+            colsAmount : number,
+            background?: string,
+            opacity   ?: number,
         }>(),
         {
             background: '#92F8FF',

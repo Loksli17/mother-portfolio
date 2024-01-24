@@ -1,7 +1,11 @@
 
 <script setup lang="ts">
 
-    import H2 from '../global/H2.vue';
+    import H2     from '../global/H2.vue';
+    import H3     from '../global/H3.vue';
+    import Circle from '../global/Circle.vue';
+    import Button from '../global/Button.vue';
+    import P      from '../global/P.vue';
 
 </script>
  
@@ -59,69 +63,16 @@
             <div class="grid auto-rows-max content-center gap-6 w-1024:gap-5">
 
                 <div>
-                    
-                    <h3 class=" 
-                        font-medium 
-                        text-[36px]
 
-                        w-1280:text-[30px]
-                        w-1024:text-[27px]
-                        w-640:text-[22px]
-                        
-                    ">
-                        Здравствуйте, меня зовут 
-                    </h3>
-
-                    <h3 class=" 
-                        font-bold 
-                        text-[36px]
-
-                        w-1280:text-[30px]
-                        w-1024:text-[27px]
-                        w-640:text-[22px] 
-
-                        text-[#009CA6]
-                    "> 
-                        Светлана Мишина 
-                    </h3>
+                    <H3 :text="'Здравствуйте, меня зовут'" > </H3>
+                    <H3 :text="'Светлана Мишина'" class="text-[#009CA6]"> </H3>
 
                 </div>
 
-                <div class="
-                    text-[28px] 
-                    w-[800px] 
-                    
-                    w-1520:w-[600px]
-
-                    w-1280:text-[24px] 
-                    w-1280:w-full
-
-                    w-1024:text-[21px]
-
-                    w-640:text-[19px]
-                ">
-                    Я графический дизайнер и видеомонтажер с большим опытом создания видеороликов и рекламной продукции для бизнеса
-                </div>
-
-                <button class=" w-max
-                    bg-default 
-                    py-[12px] 
-                    px-[45px] 
-                    text-[32px] 
-                    font-bold
-                    rounded-[10px]
-                    hover:bg-default-hover
-                    transition-all
-
-                    w-1280:text-[26px]
-                    w-1280:px-[32px]
-
-                    w-1024:text-[22px]
-                    w-1024:px-[25px]
-                    w-1024:py-[8px]
-                "> 
-                        Cвязаться 
-                </button>
+                <P :text="
+                    'Я графический дизайнер и видеомонтажер с большим опытом создания видеороликов и рекламной продукции для бизнеса'
+                "></P>
+                <Button :text="'Cвязаться'"></Button>
 
             </div>
 
@@ -187,21 +138,15 @@
             
         </div>
 
-        <div class="
-            absolute 
-            w-[360px] 
-            h-[360px] 
-            border-[20px] 
-            rounded-[180px] 
-            bottom-[-220px] 
-            right-[-140px] 
-            border-[#92F8FF] 
-            
-            w-1024:right-[-190px]
-            w-1024:bottom-[-250px]
-        ">
-
-        </div>
+        <Circle 
+            :size="360" 
+            class="
+                bottom-[-220px] 
+                right-[-140px] 
+                w-1024:right-[-190px] 
+                w-1024:bottom-[-250px]
+            "
+        />
 
     </div>
 
