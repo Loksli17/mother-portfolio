@@ -11,10 +11,14 @@
 
 <template>
 
-    <Menu></Menu>
+    <div  class="overflow-hidden">
 
-    <Hello/>
-    <About/>
-    <Example/>
+        <Menu></Menu>
+
+        <Hello/>
+        <About/>
+        <Example/>
+
+    </div>
 
 </template>

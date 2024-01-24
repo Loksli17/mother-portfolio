@@ -2,6 +2,8 @@
 <script setup lang="ts">
 
     import H2 from '../global/H2.vue';
+    import H3 from '../global/H3.vue';
+    import P  from '../global/P.vue';
 
     interface ITool
     {
@@ -76,35 +78,21 @@
                 w-1024:text-[18px]
             ">
 
-                <p>
-                    Я более 25 лет создаю рекламную продукцию для разного бизнеса. Монтирую видео-ролики, создаю баннеры, визитки и логотипы.
-                </p>
-
-                <p>
-                    Работаю в рекламном агентстве. Есть опыт работы на телевидении.
-                </p>
+                <P :text="'Я более 25 лет создаю рекламную продукцию для разного бизнеса. Монтирую видео-ролики, создаю баннеры, визитки и логотипы.'"></P>
+                <P :text="'Работаю в рекламном агентстве. Есть опыт работы на телевидении.'"></P>
 
             </div>
 
 
             <div class="grid gap-6 w-1024:gap-3">
 
-                <h2 class=" 
-                    font-bold 
-                    text-[45px] 
-            
-                    w-1280:text-[35px]
-                    w-1024:text-[28px]
-                    w-640:text-[22px]
-                ">
-                    Инструменты
-                </h2>
+                <H3 :text="'Инструменты'"></H3>
 
-                <div>
+                <div class="grid grid-flow-col auto-cols-[90px] gap-[30px] w-1024:auto-cols-[60px] w-1024:gap-[15px]">
 
                     <div v-for="tool in tools">
 
-                        {{  tool.name }}
+                        <img :alt="tool.name" :title="tool.name" :src="`/_nuxt/assets/img/${tool.img}`"/>
 
                     </div>
                 

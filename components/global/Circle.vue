@@ -23,23 +23,13 @@
     <div 
         :style="{
             background,
-            borderColor,
-            borderWidth,
-            width: size,
-            height: size,
-            borderRadius: size / 2,
+            border      : `${borderWidth}px solid ${borderColor}`,
+            width       : `${size}px`,
+            height      : `${size}px`,
+            borderRadius: `${size / 2}px`,
         }"
         class="
-            absolute 
-            w-[360px] 
-            h-[360px] 
-            border-[20px] 
-            rounded-[180px] 
-            bottom-[-220px] 
-            right-[-140px] 
-            
-            w-1024:right-[-190px]
-            w-1024:bottom-[-250px]
+            absolute
         "
     >
 

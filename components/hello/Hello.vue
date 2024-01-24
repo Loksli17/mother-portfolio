@@ -22,7 +22,6 @@
         w-1450:grid-cols-[1fr_605px]
         
         w-1280:grid-cols-1 
-        overflow-hidden
         relative
     ">
 
@@ -143,8 +142,8 @@
             class="
                 bottom-[-220px] 
                 right-[-140px] 
-                w-1024:right-[-190px] 
-                w-1024:bottom-[-250px]
+                w-1024:right-[-225px] 
+                w-1024:bottom-[-215px]
             "
         />
 
