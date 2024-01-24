@@ -73,7 +73,7 @@
                         w-1024:rounded-[30px] 
                         bg-default
                     " 
-                    src="assets/img/women.png" 
+                    src="assets/img/women2.png" 
                     alt=""
                 />
 

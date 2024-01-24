@@ -22,7 +22,7 @@
 
             <ClientOnly>
 
-                <video controls muted class="w-full h-[280px] bg-black rounded-t-[10px]" :poster="useImgUrl(video.preview)">
+                <video controls muted class="w-full h-[280px] bg-black rounded-t-[10px]" :poster="useImgUrl(`preview/${video.preview}`)">
 
                     <source :src="useVideoUrl(video.file)" type="video/mp4" />
 

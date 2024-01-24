@@ -120,7 +120,7 @@
                         w-1024:rounded-[40px]
                         bg-[#E1FDFF]
                     " 
-                    src="assets/img/women.png" 
+                    src="assets/img/women1.png" 
                     alt=""
                 >
                 
