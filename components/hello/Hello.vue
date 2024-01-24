@@ -53,7 +53,7 @@
                 <PointsBox :cols-amount="7" :rows-amount="3"></PointsBox>
                 
                 <H2 :text="'Видеомонтаж'"></H2>
-                <H2 :text="'Графический дизайн'"></H2>
+                <H2 :text="'Графический дизайн'" class=" leading-10"></H2>
 
             </div>
 

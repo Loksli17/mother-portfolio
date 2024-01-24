@@ -110,7 +110,16 @@
                 </div>
 
                 <PointsBox 
-                    class="absolute bottom-[198px] left-[-90px] -z-10" 
+                    class="
+                        absolute bottom-[198px] left-[-90px] -z-10
+                        w-1750:bottom-[148px]
+                        w-1520:bottom-[118px]
+                        
+                        w-1280:bottom-[58px]
+                        w-1280:left-[-60px]
+
+                        w-640:left-[-40px]
+                    " 
                     :cols-amount="6" 
                     :rows-amount="9"
                 >
@@ -124,12 +133,12 @@
                     p-7 
                     bottom-[-50px] 
                     left-[-40px]
-                    rounded-[40px]
+                    rounded-[35px]
                     font-medium
 
                     w-1520:p-5
                     w-1520:text-[26px]
-                    w-1520:rounded-[25px] 
+                    w-1520:rounded-[22px] 
                     w-1520:left-[-40px]
                     w-1520:bottom-[-50px]
 
