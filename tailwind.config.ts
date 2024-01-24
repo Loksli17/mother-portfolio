@@ -15,6 +15,12 @@ export default {
         
         extend: {
 
+            gridTemplateColumns: {
+                'repeat-min-540': 'repeat(auto-fill, minmax(540px, 1fr))',
+                'repeat-min-440': 'repeat(auto-fill, minmax(540px, 1fr))',
+                'repeat-min-320': 'repeat(auto-fill, minmax(320px, 1fr))'
+            },
+
             colors: {
                 'default'   : 'rgba(146, 248, 255, 1)',
                 'default-60': 'rgba(146, 248, 255, 0.6)',
