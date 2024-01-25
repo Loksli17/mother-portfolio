@@ -1,8 +1,8 @@
 
 <script setup lang="ts">
     
-    import BannerItem from '../Items/BannerItem.vue';
-    import banners    from '../../../data/banners';
+    import ImageItem from '../Items/ImageItem.vue';
+    import banners   from '../../../data/banners';
 
 </script>
 
@@ -19,7 +19,7 @@
         w-1024:gap-8
     ">
     
-        <BannerItem v-for="banner in banners" :banner="banner"></BannerItem>
+        <ImageItem v-for="banner in banners" :image="banner"></ImageItem>
 
     </div>
 

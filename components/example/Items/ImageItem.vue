@@ -1,10 +1,10 @@
 
 <script setup lang="ts">
 
-    import { type IBanner } from '~/types';
+    import { type IImage } from '~/types';
 
     defineProps<{
-        banner: IBanner;
+        image: IImage;
     }>();
 
 </script>
@@ -30,7 +30,7 @@
                     "
                 >
 
-                    <div :style="{backgroundImage: `url(${useImgUrl(`banners/${banner.file}`)})`}" class="
+                    <div :style="{backgroundImage: `url(${useImgUrl(`${image.file}`)})`}" class="
                         w-full 
                         h-full 
                         bg-center 
@@ -43,7 +43,7 @@
 
                 </div>
                 
-                <!-- <img  :src="useImgUrl(`banners/${banner.file}`)"> -->
+                <!-- <img  :src="useImgUrl(`images/${image.file}`)"> -->
 
             </ClientOnly>
 
@@ -52,7 +52,7 @@
         <div class="p-7 grid gap-5 w-1024:p-4 bg-default rounded-b-[10px] w-full">
 
             <div class=" text-[25px] w-1024:text-[20px]">
-                {{ banner.name }}
+                {{ image.name }}
             </div>
 
             <div class=" flex gap-[10px] flex-wrap w-full">
@@ -69,7 +69,7 @@
                     w-1024:rounded 
                     w-1024:text-[15px]
                 " 
-                    v-for="tag in banner.tags"
+                    v-for="tag in image.tags"
                 >
                     {{ tag }}
                 </div>

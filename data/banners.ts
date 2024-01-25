@@ -1,35 +1,35 @@
-import type { IBanner } from "~/types";
+import type { IImage } from "~/types";
 
 
-const banners: Array<IBanner> = [
+const banners: Array<IImage> = [
     {
         name: 'Визитка. Дима лучший.',
-        file: 'test.png',
+        file: 'banners/test.png',
         tags: ['Баннер', 'Красота']
     },
     {
         name: 'Визитка. Дима лучший.',
-        file: 'test.png',
+        file: 'banners/test.png',
         tags: ['Баннер', 'Красота']
     },
     {
         name: 'Визитка. Дима лучший.',
-        file: 'test.png',
+        file: 'banners/test.png',
         tags: ['Баннер', 'Красота']
     },
     {
         name: 'Визитка. Дима лучший.',
-        file: 'test.png',
+        file: 'banners/test.png',
         tags: ['Баннер', 'Красота']
     },
     {
         name: 'Визитка. Дима лучший.',
-        file: 'test.png',
+        file: 'banners/test.png',
         tags: ['Баннер', 'Красота']
     },
     {
         name: 'Визитка. Дима лучший.',
-        file: 'test.png',
+        file: 'banners/test.png',
         tags: ['Баннер', 'Красота']
     }
 ];

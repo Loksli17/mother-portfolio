@@ -12,7 +12,7 @@ export interface IVideo
 }
 
 
-export interface IBanner
+export interface IImage
 {
     name: string;
     file: string;
