@@ -25,7 +25,7 @@ export default {
             colors: {
                 'default'   : 'rgba(146, 248, 255, 1)',
                 'default-60': 'rgba(146, 248, 255, 0.6)',
-                'default-50': 'rgba(227, 253, 255, 0.5)',
+                'default-50': 'rgba(221, 253, 255, 0.5)',
                 'default-40': 'rgba(227, 253, 255, 0.4)',
 
                 'default-hover': 'rgba(120, 229, 236, 1)',

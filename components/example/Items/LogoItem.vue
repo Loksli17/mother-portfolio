@@ -4,11 +4,10 @@
     import { type IImage } from '~/types';
 
     defineProps<{
-        image: IImage;
+        logo: IImage;
     }>();
 
 </script>
-
 
 
 <template>
@@ -26,11 +25,12 @@
                         w-1024:h-[250px] 
                         rounded-t-[10px]
                         cursor-pointer
-                        overflow-hidden
+                        bg-slate-100
+                        grid justify-items-center items-center
                     "
                 >
 
-                    <div :style="{backgroundImage: `url(${useImgUrl(`${image.file}`)})`}" class="
+                    <!-- <div :style="{backgroundImage: `url(${useImgUrl(`${logo.file}`)})`}" class="
                         w-full 
                         h-full 
                         bg-center 
@@ -39,11 +39,13 @@
                         transition-transform
                     ">
                         
-                    </div>
+                    </div> -->
+
+                    <img class=" w-4/5 " :src="useImgUrl(`${logo.file}`)">
 
                 </div>
                 
-                <!-- <img  :src="useImgUrl(`images/${image.file}`)"> -->
+                
 
             </ClientOnly>
 
@@ -52,7 +54,7 @@
         <div class="p-7 grid gap-5 w-1024:p-4 bg-default rounded-b-[10px] w-full">
 
             <div class=" text-[25px] w-1024:text-[20px]">
-                {{ image.name }}
+                {{ logo.name }}
             </div>
 
             <div class=" flex gap-[10px] flex-wrap w-full">
@@ -69,7 +71,7 @@
                     w-1024:rounded 
                     w-1024:text-[15px]
                 " 
-                    v-for="tag in image.tags"
+                    v-for="tag in logo.tags"
                 >
                     {{ tag }}
                 </div>
