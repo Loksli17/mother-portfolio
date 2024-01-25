@@ -22,7 +22,7 @@
 
             <ClientOnly>
 
-                <video controls muted class="w-full h-[280px] bg-black rounded-t-[10px]" :poster="useImgUrl(`preview/${video.preview}`)">
+                <video controls muted class="w-full h-[309px] w-1024:h-[250px] bg-black rounded-t-[10px]" :poster="useImgUrl(`preview/${video.preview}`)">
 
                     <source :src="useVideoUrl(video.file)" type="video/mp4" />
 
@@ -38,9 +38,10 @@
                 {{ video.name }}
             </div>
 
-            <div class=" grid grid-flow-col auto-cols-max gap-4 w-full">
+            <div class=" flex gap-[10px] flex-wrap w-full">
 
-                <div class=" w-full
+                <div class=" 
+                        w-max
                         px-4 
                         py-2 
                         text-[19px] 

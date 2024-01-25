@@ -4,6 +4,7 @@
     import Hello   from '../components/hello/Hello.vue';
     import About   from '../components/about/About.vue';
     import Example from '../components/example/Example.vue';
+    import Footer  from '~/components/footer/Footer.vue';
 
 </script>
 
@@ -18,6 +19,7 @@
         <Hello/>
         <About/>
         <Example/>
+        <Footer/>
 
     </div>
 
