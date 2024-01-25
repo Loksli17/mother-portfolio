@@ -54,6 +54,7 @@
         grid
         gap-[80px]
 
+        w-1024:mb-[20px]
         w-1024:p-[50px]
         w-1024:gap-[50px]
         
@@ -62,6 +63,8 @@
 
         relative
         overflow-hidden
+
+        
     ">
 
         <div class="

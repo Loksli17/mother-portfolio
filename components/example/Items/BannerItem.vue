@@ -1,11 +1,14 @@
 
 <script setup lang="ts">
 
+    import PopUp           from '~/components/global/PopUp.vue';
     import { type IImage } from '~/types';
 
     defineProps<{
         banner: IImage;
     }>();
+
+    const showPopUp = ref<boolean>(false);
 
 </script>
 
@@ -20,6 +23,7 @@
             <ClientOnly>
 
                 <div 
+                    @click="showPopUp = true"
                     class=" 
                         w-full 
                         h-[309px] 
@@ -42,8 +46,6 @@
                     </div>
 
                 </div>
-                
-                <!-- <img  :src="useImgUrl(`images/${image.file}`)"> -->
 
             </ClientOnly>
 
@@ -79,5 +81,16 @@
         </div>
             
     </div>
+
+
+    <Teleport to="body">
+
+        <PopUp v-model:toggle="showPopUp">
+
+            <img class=" w-[500px] w-750:w-full" :src="useImgUrl(`${banner.file}`)">
+
+        </PopUp>
+
+    </Teleport>
 
 </template>

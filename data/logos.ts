@@ -3,35 +3,20 @@ import type { IImage } from "~/types";
 
 const banners: Array<IImage> = [
     {
-        name: 'Логотип',
-        file: 'logos/test.png',
+        name: 'Main Street',
+        file: 'logos/mainst.png',
         tags: ['Логотип', 'Красота']
     },
     {
         name: 'Логотип',
-        file: 'logos/test.png',
-        tags: ['Логотип', 'Красота']
+        file: 'logos/khabus.png',
+        tags: ['Логотип']
     },
     {
-        name: 'Логотип',
-        file: 'logos/test.png',
-        tags: ['Логотип', 'Красота']
+        name: 'Дальгеотурс',
+        file: 'logos/turs.png',
+        tags: ['Логотип', 'Минимализм']
     },
-    {
-        name: 'Логотип',
-        file: 'logos/test.png',
-        tags: ['Логотип', 'Красота']
-    },
-    {
-        name: 'Логотип',
-        file: 'logos/test.png',
-        tags: ['Логотип', 'Красота']
-    },
-    {
-        name: 'Логотип',
-        file: 'logos/test.png',
-        tags: ['Баннер', 'Красота']
-    }
 ];
 
 

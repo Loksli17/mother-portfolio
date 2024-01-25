@@ -3,34 +3,34 @@ import type { IImage } from "~/types";
 
 const banners: Array<IImage> = [
     {
-        name: 'Визитка. Дима лучший.',
-        file: 'banners/test.png',
-        tags: ['Баннер', 'Красота']
+        name: 'Бизнес-видео. Скидки',
+        file: 'banners/bv-discount.jpg',
+        tags: ['Красота']
     },
     {
-        name: 'Визитка. Дима лучший.',
-        file: 'banners/test.png',
-        tags: ['Баннер', 'Красота']
+        name: 'Бизнес-видео. На рекламу собаку...',
+        file: 'banners/bv-dog.jpg',
+        tags: ['Юмор', 'Минимализм']
     },
     {
-        name: 'Визитка. Дима лучший.',
-        file: 'banners/test.png',
-        tags: ['Баннер', 'Красота']
+        name: 'Бизнес-видео. Заказывай рекламу.',
+        file: 'banners/bv-video.jpg',
+        tags: ['Юмор', 'Минимализм']
     },
     {
-        name: 'Визитка. Дима лучший.',
-        file: 'banners/test.png',
-        tags: ['Баннер', 'Красота']
+        name: 'Центр охраны здоровья.',
+        file: 'banners/centerzd.jpg',
+        tags: ['Вертикальный', 'Под стенд']
     },
     {
-        name: 'Визитка. Дима лучший.',
-        file: 'banners/test.png',
-        tags: ['Баннер', 'Красота']
+        name: 'Коммсионка27. Большой комиссионный',
+        file: 'banners/commis.jpg',
+        tags: ['Наружная реклама', 'Графический дизайн']
     },
     {
-        name: 'Визитка. Дима лучший.',
-        file: 'banners/test.png',
-        tags: ['Баннер', 'Красота']
+        name: 'ДГС. Продлите лето',
+        file: 'banners/dgs.jpg',
+        tags: ['Красота']
     }
 ];
 

@@ -10,7 +10,7 @@
 
 <template>
 
-    <div class=" p-[80px] w-1024:p-[50px] w-640:[p-30px] bg-default grid gap-[30px] w-1024:[p-20px]">
+    <div class=" p-[80px] w-1024:p-[50px] w-640:p-[30px] bg-default grid gap-[30px]">
 
         <H2 :text="'Контакты'"></H2>
 
@@ -38,7 +38,7 @@
                                 <img src="assets/img/copy-img.png" alt="">
                             </div>
                         
-                        </div> <!-- https://t.me/Svetlana_Mi6 -->
+                        </div>  <!-- https://t.me/Svetlana_Mi6 -->
                          
                     </div>
 
