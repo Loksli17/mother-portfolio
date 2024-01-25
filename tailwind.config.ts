@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
+
 export default {
     
     content: [
@@ -30,6 +31,9 @@ export default {
                 'default-hover': 'rgba(120, 229, 236, 1)',
             },
 
+            backgroundSize: {
+                'cover-150': '150%'
+            },
         },
 
         fontFamily: {

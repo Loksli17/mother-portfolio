@@ -10,3 +10,11 @@ export interface IVideo
     tags   : Array<string>;
     preview: string;
 }
+
+
+export interface IBanner
+{
+    name: string;
+    file: string;
+    tags: Array<string>;
+}

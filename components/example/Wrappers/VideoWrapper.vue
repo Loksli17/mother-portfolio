@@ -2,7 +2,7 @@
 <script setup lang="ts">
     
     import VideoItem from '../Items/VideoItem.vue';
-    import videos    from '../../../videos';
+    import videos    from '../../../data/videos';
 
 </script>
 
