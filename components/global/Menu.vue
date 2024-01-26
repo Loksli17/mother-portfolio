@@ -38,13 +38,20 @@
     });
 
 
-    const scroll = (e: PointerEvent) => 
+    const scroll = (e: PointerEvent, ms: number = 0) => 
     {   
-        const target   = (e.target as HTMLElement);
-        const children = target.parentElement?.children;
-        const index    = Array.prototype.indexOf.call(children, target);
 
-        emit('scroll', index);
+        toggle.value = false;
+
+        setTimeout(() => 
+        {
+            const target   = (e.target as HTMLElement);
+            const children = target.parentElement?.children;
+            const index    = Array.prototype.indexOf.call(children, target);
+
+            emit('scroll', index);
+
+        }, ms);
     } 
 
 </script>
@@ -142,10 +149,10 @@
                 :class="{ 'opacity-0': !toggle, 'opacity-100': toggle}"
             >  
 
-                <NuxtLink class=" text-[22px] h-max"> Приветствие </NuxtLink>
-                <NuxtLink class=" text-[22px] h-max"> Обо мне </NuxtLink>
-                <NuxtLink class=" text-[22px] h-max"> Примеры работ </NuxtLink>
-                <NuxtLink class=" text-[22px] h-max"> Контакты </NuxtLink>
+                <NuxtLink @click.prevent="scroll($event, 200)" class=" text-[22px] h-max"> Приветствие </NuxtLink>
+                <NuxtLink @click.prevent="scroll($event, 200)" class=" text-[22px] h-max"> Обо мне </NuxtLink>
+                <NuxtLink @click.prevent="scroll($event, 200)" class=" text-[22px] h-max"> Примеры работ </NuxtLink>
+                <NuxtLink @click.prevent="scroll($event, 200)" class=" text-[22px] h-max"> Контакты </NuxtLink>
 
             </div>
 
