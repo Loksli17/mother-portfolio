@@ -3,8 +3,14 @@
 
     import Burger from './Burger.vue';
 
+
     const toggle = ref<boolean>(false);
     const left   = ref<number>(0);
+
+    const emit = defineEmits<{
+        scroll: [number],
+    }>();
+
 
     watchEffect(() =>
     {
@@ -14,7 +20,6 @@
 
         if(toggle.value) left.value = 0;
         else left.value = window.innerWidth;
-
     });
 
 
@@ -29,7 +34,18 @@
                 toggle.value = false;
             }
         });
+
     });
+
+
+    const scroll = (e: PointerEvent) => 
+    {   
+        const target   = (e.target as HTMLElement);
+        const children = target.parentElement?.children;
+        const index    = Array.prototype.indexOf.call(children, target);
+
+        emit('scroll', index);
+    } 
 
 </script>
 
@@ -67,10 +83,10 @@
             auto-cols-max 
             content-center
         ">
-            <NuxtLink class=" text-[22px] h-max"> Приветствие </NuxtLink>
-            <NuxtLink class=" text-[22px] h-max"> Обо мне </NuxtLink>
-            <NuxtLink class=" text-[22px] h-max"> Примеры работ </NuxtLink>
-            <NuxtLink class=" text-[22px] h-max"> Контакты </NuxtLink>
+            <NuxtLink @click.prevent="scroll" class=" text-[22px] h-max"> Приветствие </NuxtLink>
+            <NuxtLink @click.prevent="scroll" class=" text-[22px] h-max"> Обо мне </NuxtLink>
+            <NuxtLink @click.prevent="scroll" class=" text-[22px] h-max"> Примеры работ </NuxtLink>
+            <NuxtLink @click.prevent="scroll" class=" text-[22px] h-max"> Контакты </NuxtLink>
         </div>
 
 

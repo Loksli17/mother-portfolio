@@ -6,6 +6,14 @@
     import Example from '../components/example/Example.vue';
     import Footer  from '~/components/footer/Footer.vue';
 
+
+    const root = ref<HTMLDivElement | null>(null);
+    
+    const scroll = (index: number) => 
+    {
+        root.value!.children[index].scrollIntoView( {behavior: 'smooth'} );
+    }
+
 </script>
 
 
@@ -14,12 +22,17 @@
 
     <div  class="overflow-hidden">
 
-        <Menu></Menu>
+        <Menu @scroll="scroll"></Menu>
 
-        <Hello/>
-        <About/>
-        <Example/>
-        <Footer/>
+        <div ref="root">
+
+            <Hello/>
+            <About/>
+            <Example/>
+            <Footer/>
+
+        </div>
+
 
     </div>
 
