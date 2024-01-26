@@ -1,27 +1,23 @@
 
 <script setup lang="ts">
 
-    import Burger from './Burger.vue';
-
-
+    import Burger   from '../global/Burger.vue';
+    import LinkItem from './LinkItem.vue';
 
     defineProps<{
-        activeLinkIndex: number,
-    }>();
-
-    const emit = defineEmits<{
-        clickToLink: [number];
-        scroll     : [number];
-    }>();
+        links: Array<string>;
+    }>()
 
 
-    const toggle = ref<boolean>(false);
-    const left   = ref<number>(0);
+    const toggle              = ref<boolean>(false);
+    const left                = ref<number>(0);
+    const activeMenuLinkIndex = ref<number>(0);
+    
+    let root = ref<HTMLDivElement | null>(null);
 
 
     onMounted(() => 
     {
-
         window.addEventListener("resize", () => 
         {
             if(!toggle.value) left.value = window.innerWidth;
@@ -34,8 +30,26 @@
 
         window.addEventListener('scroll', (e: Event) => 
         {
-            emit('scroll', window.scrollY);
+            if(scrollY == scrollMaxValue())
+            {
+                activeMenuLinkIndex.value = root.value!.children.length - 1;
+                return;
+            }
+
+            for(let i = 0; i < root.value!.children.length; i++)
+            {
+                const offset = (root.value!.children[i] as HTMLElement).offsetTop;
+                const height = (root.value!.children[i] as HTMLElement).getBoundingClientRect().height;
+
+                if(scrollY < offset + height)
+                {
+                    activeMenuLinkIndex.value = i;
+                    break;
+                }
+            }
         });
+
+        root = inject('root')!;
     });
 
 
@@ -60,7 +74,7 @@
             const children = target.parentElement?.children;
             const index    = Array.prototype.indexOf.call(children, target);
 
-            emit('clickToLink', index);
+            root.value!.children[index].scrollIntoView( {behavior: 'smooth'} );
 
         }, ms);
     } 
@@ -101,10 +115,8 @@
             auto-cols-max 
             content-center
         ">
-            <NuxtLink @click.prevent="scroll" class=" text-[22px] h-max"> Приветствие </NuxtLink>
-            <NuxtLink @click.prevent="scroll" class=" text-[22px] h-max"> Обо мне </NuxtLink>
-            <NuxtLink @click.prevent="scroll" class=" text-[22px] h-max"> Примеры работ </NuxtLink>
-            <NuxtLink @click.prevent="scroll" class=" text-[22px] h-max"> Контакты </NuxtLink>
+            <LinkItem @click-scroll="scroll" v-for="link in links" :text="link"></LinkItem>
+
         </div>
 
 
@@ -160,10 +172,7 @@
                 :class="{ 'opacity-0': !toggle, 'opacity-100': toggle}"
             >  
 
-                <NuxtLink @click.prevent="scroll($event, 200)" class=" text-[22px] h-max"> Приветствие </NuxtLink>
-                <NuxtLink @click.prevent="scroll($event, 200)" class=" text-[22px] h-max"> Обо мне </NuxtLink>
-                <NuxtLink @click.prevent="scroll($event, 200)" class=" text-[22px] h-max"> Примеры работ </NuxtLink>
-                <NuxtLink @click.prevent="scroll($event, 200)" class=" text-[22px] h-max"> Контакты </NuxtLink>
+                <LinkItem @click-scroll="scroll($event, 200)" v-for="link in links" :text="link"></LinkItem>
 
             </div>
 
