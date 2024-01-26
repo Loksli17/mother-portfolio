@@ -4,12 +4,34 @@
     import Burger from './Burger.vue';
 
 
-    const toggle = ref<boolean>(false);
-    const left   = ref<number>(0);
-
     const emit = defineEmits<{
         scroll: [number],
     }>();
+
+
+    const toggle       = ref<boolean>(false);
+    const left         = ref<number>(0);
+    const activeScroll = ref<number>(0);
+
+
+    onMounted(() => 
+    {
+
+        window.addEventListener("resize", () => 
+        {
+            if(!toggle.value) left.value = window.innerWidth;
+
+            if(window.innerWidth >= 1024)
+            {
+                toggle.value = false;
+            }
+        });
+
+        window.addEventListener('scroll', (e: Event) => 
+        {
+            console.log(window.scrollY);
+        });
+    });
 
 
     watchEffect(() =>
@@ -23,24 +45,8 @@
     });
 
 
-    onMounted(() => 
-    {
-        window.addEventListener("resize", () => 
-        {
-            if(!toggle.value) left.value = window.innerWidth;
-
-            if(window.innerWidth >= 1024)
-            {
-                toggle.value = false;
-            }
-        });
-
-    });
-
-
     const scroll = (e: PointerEvent, ms: number = 0) => 
     {   
-
         toggle.value = false;
 
         setTimeout(() => 
@@ -121,8 +127,8 @@
             
         </div>
         
-
     </div>
+
 
     <ClientOnly>
 
