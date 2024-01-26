@@ -4,14 +4,19 @@
     import Burger from './Burger.vue';
 
 
+
+    defineProps<{
+        activeLinkIndex: number,
+    }>();
+
     const emit = defineEmits<{
-        scroll: [number],
+        clickToLink: [number];
+        scroll     : [number];
     }>();
 
 
-    const toggle       = ref<boolean>(false);
-    const left         = ref<number>(0);
-    const activeScroll = ref<number>(0);
+    const toggle = ref<boolean>(false);
+    const left   = ref<number>(0);
 
 
     onMounted(() => 
@@ -29,7 +34,7 @@
 
         window.addEventListener('scroll', (e: Event) => 
         {
-            console.log(window.scrollY);
+            emit('scroll', window.scrollY);
         });
     });
 
@@ -55,7 +60,7 @@
             const children = target.parentElement?.children;
             const index    = Array.prototype.indexOf.call(children, target);
 
-            emit('scroll', index);
+            emit('clickToLink', index);
 
         }, ms);
     } 

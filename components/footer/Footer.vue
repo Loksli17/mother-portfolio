@@ -169,25 +169,48 @@
 
             </div>
             
+
             <div class="grid gap-4 content-end">
                 
-                <PointsBox class="w-1024:hidden" :cols-amount="6" :rows-amount="4" :background="'#fff'"></PointsBox>
+                <PointsBox 
+                    class="w-1024:hidden" 
+                    :cols-amount="6" 
+                    :rows-amount="4" 
+                    :background="'#fff'"
+                ></PointsBox>
                 
-                <div class="text-[24px] w-1280:text-[21px] w-750:text-[19px] grid grid-cols-[24px_1fr] gap-2 items-center">
+                <div class="
+                    text-[24px] 
+                    w-1280:text-[21px] 
+                    w-750:text-[19px] 
+                    grid 
+                    grid-cols-[24px_1fr] 
+                    gap-2 
+                    items-center
+                ">
                     <img src="assets/img/pointer.png">
                     <span>г. Хабаровск, +7 МСК</span>
                 </div>
                 
-                <div class="text-[22px] w-1280:text-[19px] w-750:text-[18px]">
+                <div class="
+                    text-[22px] 
+                    w-1280:text-[19px] 
+                    w-750:text-[18px]
+                ">
                     @Портфолио, {{ year }}
                 </div>
                 
-                <div class="text-[22px] w-1280:text-[19px] w-750:text-[18px]">
+                <div class="
+                    text-[22px] 
+                    w-1280:text-[19px] 
+                    w-750:text-[18px]
+                ">
                     Светлана Георгиевна Мишина
                 </div>
 
             </div>
             
+
             <div class="grid gap-3 w-1024:gap-2 content-end">
 
                 <NuxtLink class="text-[22px] w-1280:text-[19px] w-750:text-[18px]">Приветствие</NuxtLink>
