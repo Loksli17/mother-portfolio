@@ -1,17 +1,36 @@
 
 
+<script setup lang="ts">
+
+    defineProps<{
+        toggle: boolean;
+    }>();
+
+    defineEmits<{
+        'update:toggle': [boolean],
+    }>()
+
+</script>
+
+
+
 <template>
 
-    <div>
-        <button class="relative group">
-            <div class="relative flex overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all ring-0 group-focus:ring-4 ring-opacity-30 duration-200">
-                <div class="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden">
-                    <div class="bg-white h-[2px] w-7 transform transition-all duration-300 origin-left group-focus:rotate-[42deg]"></div>
-                    <div class="bg-white h-[2px] w-1/2 rounded transform transition-all duration-300 group-focus:-translate-x-10"></div>
-                    <div class="bg-white h-[2px] w-7 transform transition-all duration-300 origin-left group-focus:-rotate-[42deg]"></div>
-                </div>
-            </div>
-        </button>
+    <div 
+        @click="$emit('update:toggle', !toggle)"  
+        class="
+            grid 
+            w-[35px] 
+            grid-rows-[3px_3px_3px]
+            content-center
+            gap-[9px]
+        "
+    >
+
+        <div class="h-[3px] rounded w-full bg-black transition-all origin-top-left" :class="{'rotate-[45deg]': toggle}"></div>
+        <div class="h-[3px] rounded w-1/2 bg-black transition-all" :class="{'-translate-x-16': toggle, 'opacity-0': toggle}"></div>
+        <div class="h-[3px] rounded w-full bg-black transition-all origin-bottom-left" :class="{'-rotate-[45deg]': toggle}"></div>
+
     </div>
 
 </template>

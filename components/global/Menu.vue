@@ -3,6 +3,8 @@
 
     import Burger from './Burger.vue';
 
+    const toggle = ref<boolean>(false);
+
 </script>
 
 
@@ -30,7 +32,14 @@
         w-640:px-[30px]
     ">
 
-        <div class="w-1024:hidden grid gap-12 grid-flow-col auto-cols-max content-center">
+        <div class="
+            w-1024:hidden 
+            grid 
+            gap-12 
+            grid-flow-col 
+            auto-cols-max 
+            content-center
+        ">
             <NuxtLink class=" text-[22px] h-max"> Приветствие </NuxtLink>
             <NuxtLink class=" text-[22px] h-max"> Обо мне </NuxtLink>
             <NuxtLink class=" text-[22px] h-max"> Примеры работ </NuxtLink>
@@ -39,11 +48,18 @@
 
         <div class="hidden w-1024:grid ">
 
-            <Burger></Burger>
+            <Burger v-model:toggle="toggle"></Burger>
 
         </div>
 
-        <div class="grid grid-cols-[40px_40px] gap-[30px] w-1024:grid-cols-[35px_35px] w-1024:gap-[20px] content-center">
+        <div class="
+            grid 
+            grid-cols-[40px_40px] 
+            gap-[30px] 
+            w-1024:grid-cols-[35px_35px] 
+            w-1024:gap-[20px] 
+            content-center
+        ">
 
             <div>
                 <img src="assets/img/tg.png"/>
