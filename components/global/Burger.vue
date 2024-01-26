@@ -27,9 +27,40 @@
         "
     >
 
-        <div class="h-[3px] rounded w-full bg-black transition-all origin-top-left" :class="{'rotate-[45deg]': toggle}"></div>
-        <div class="h-[3px] rounded w-1/2 bg-black transition-all" :class="{'-translate-x-16': toggle, 'opacity-0': toggle}"></div>
-        <div class="h-[3px] rounded w-full bg-black transition-all origin-bottom-left" :class="{'-rotate-[45deg]': toggle}"></div>
+        <div 
+            class="
+                h-[3px] 
+                rounded 
+                w-full 
+                bg-black 
+                transition-all 
+                origin-top-left
+            " 
+            :class="{'rotate-[45deg]': toggle}"
+        >
+        </div>
+
+        <div 
+            class="
+                h-[3px] 
+                rounded w-1/2 
+                bg-black 
+                transition-all
+            " 
+            :class="{'-translate-x-5': toggle, 'opacity-0': toggle}"
+        ></div>
+        
+        <div 
+            class="
+                h-[3px] 
+                rounded 
+                w-full 
+                bg-black 
+                transition-all 
+                origin-bottom-left
+            " 
+            :class="{'-rotate-[45deg]': toggle}"
+        ></div>
 
     </div>
 

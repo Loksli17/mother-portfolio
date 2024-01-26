@@ -1,11 +1,17 @@
 
+
 <script setup lang="ts">
+
+
+    import X from '../global/X.vue';
+
 
     const props = defineProps<{
         toggle: boolean
     }>();
 
     const emit = defineEmits<{'update:toggle': [boolean]}>();
+
 
     const close = () => 
     {
@@ -14,14 +20,7 @@
 
     watchEffect(() => 
     {
-        if(props.toggle)
-        {
-            document.body.style.overflowY = 'hidden';
-        }
-        else 
-        {
-            document.body.style.overflowY = 'auto';
-        }
+        toggleBodyOverflow(props.toggle);
     });
 
 </script>
@@ -44,19 +43,27 @@
             justify-center 
             items-center 
             bg-black
-            bg-opacity-85
+            bg-opacity-90
             justify-items-center
         "
     >
 
-        <div class="bg-white p-10 w-1024:p-8 w-640:p-4 rounded-md w-750:w-[85%] max-h-[80%] overflow-y-auto">
+        <div class="
+            bg-white 
+            p-10 
+            w-1024:p-8 
+            w-640:p-4 
+            rounded-md 
+            w-750:w-[85%] 
+            max-h-[80%] 
+            overflow-y-auto
+        ">
             <slot></slot>
 
         </div>
 
-        <div @click="close" class=" fixed w-[40px] h-[40px] bg-white top-7 right-7 ">
 
-        </div>
+        <X @click="close" class=" fixed top-7 right-7 "> </X>
 
     </div>
 
