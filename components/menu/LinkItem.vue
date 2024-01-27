@@ -23,7 +23,7 @@
             text-[22px]
             h-max
             cursor-pointer
-            hover:font-semibold
+            hover:text-white
             transition-all
         "
         :class="{

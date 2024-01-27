@@ -18,7 +18,7 @@
 
     const countActiveIndex = (scrollY: number) => 
     {
-        if(scrollY == scrollMaxValue())
+        if((scrollMaxValue() - scrollY) <= 40)
         {
             activeIndex.value = root.value!.children.length - 1;
             return;
@@ -29,7 +29,7 @@
             const offset = (root.value!.children[i] as HTMLElement).offsetTop;
             const height = (root.value!.children[i] as HTMLElement).getBoundingClientRect().height;
 
-            if(scrollY < offset + height)
+            if(scrollY < offset + height - 1.5)
             {
                 activeIndex.value = i;
                 break;
