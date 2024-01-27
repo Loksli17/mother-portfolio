@@ -148,11 +148,17 @@
             content-center
         ">
 
-            <div>
+            <div
+                class="cursor-pointer" 
+                @click="copyToClipboard('https://t.me/Svetlana_Mi6', 'Аккаунт в Telegram был скопирован')"
+            >
                 <img src="assets/img/tg.png"/>
             </div>
 
-            <div>
+            <div
+                class="cursor-pointer"
+                @click="copyToClipboard('smi0504@mail.ru', 'Электронная почта была скопирована')"
+            >
                 <img src="assets/img/mail.png"/>
             </div>
             

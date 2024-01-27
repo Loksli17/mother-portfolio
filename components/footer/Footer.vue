@@ -75,7 +75,8 @@
                         <div class="
                             grid 
                             grid-cols-[max-content_max-content] 
-                            content-center 
+                            content-center
+                            item-center
                             gap-3
                         ">
                             
@@ -87,12 +88,15 @@
                                t.me/Svetlana_Mi6
                             </span>
                             
-                            <div class="
-                                w-[25px] 
-                                w-1280:w-[22px] 
-                                w-750:w-[20px] 
-                                cursor-pointer
-                            ">
+                            <div 
+                                class="
+                                    w-[25px] 
+                                    w-1280:w-[22px] 
+                                    w-750:w-[20px] 
+                                    cursor-pointer
+                                "
+                                @click="copyToClipboard('https://t.me/Svetlana_Mi6', 'Аккаунт в Telegram был скопирован')"
+                            >
                                 <img src="assets/img/copy-img.png" alt="">
                             </div>
                         
@@ -141,6 +145,7 @@
                                 grid 
                                 grid-cols-[max-content_max-content] 
                                 content-center 
+                                item-center
                                 gap-3
                             ">
                             
@@ -152,12 +157,15 @@
                                    smi0504@mail.ru
                                 </span>
                             
-                                <div class="
-                                    w-[25px] 
-                                    w-1280:w-[22px] 
-                                    w-750:w-[20px] 
-                                    cursor-pointer
-                                ">
+                                <div 
+                                    @click="copyToClipboard('smi0504@mail.ru', 'Электронная почта была скопирована')" 
+                                    class="
+                                        w-[25px] 
+                                        w-1280:w-[22px] 
+                                        w-750:w-[20px] 
+                                        cursor-pointer
+                                    "
+                                >
                                     <img src="assets/img/copy-img.png" alt="">
                                 </div>
                         

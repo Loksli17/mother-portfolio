@@ -70,7 +70,7 @@
                 <P :text="
                     'Я графический дизайнер и видеомонтажер с большим опытом создания видеороликов и рекламной продукции для бизнеса'
                 "></P>
-                <Button :text="'Cвязаться'"></Button>
+                <Button @click="copyToClipboard('https://t.me/Svetlana_Mi6', 'Аккаунт в Telegram был скопирован')" :text="'Cвязаться'"></Button>
 
             </div>
 

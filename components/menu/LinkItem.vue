@@ -19,35 +19,25 @@
 
     <NuxtLink 
         @click.prevent="$emit('click-scroll', $event)" 
-        class=" 
+        class="
             text-[22px]
             h-max
             cursor-pointer
-            hover:text-white
             transition-all
+            after:absolute
+            after:w-full
+            after:h-[2px]
+            after:bg-white
+            after:bottom-0
+            hover:text-[#009da7]
         "
         :class="{
             'font-semibold': index == activeIndex,
             'relative'     : index == activeIndex,
+            'after:block'  : index == activeIndex
         }"
     > 
         {{ text }}
-
-        <div 
-            class="
-                absolute
-                w-full
-                h-[2px]
-                bg-white
-                bottom-0
-            "
-            :class="
-            {
-                'block' : index == activeIndex,
-                'hidden': index != activeIndex,
-            }"
-        > 
-        </div>
 
     </NuxtLink>
 
