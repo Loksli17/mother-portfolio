@@ -8,8 +8,8 @@ export default defineNuxtPlugin((nuxtApp) =>
     nuxtApp.vueApp.use(
         Vue3Toastify, 
         { 
-            autoClose: 2000, 
-            position: toast.POSITION.BOTTOM_CENTER 
+            autoClose: 3000, 
+            position : toast.POSITION.BOTTOM_CENTER,
         }
     );
 
