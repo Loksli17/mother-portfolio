@@ -2,7 +2,9 @@
 <script setup lang="ts">
 
     defineProps<{
-        text: string
+        text       : string,
+        activeIndex: number,
+        index      : number,
     }>();
 
     defineEmits<{
@@ -20,9 +22,33 @@
         class=" 
             text-[22px]
             h-max
+            cursor-pointer
+            hover:font-semibold
+            transition-all
         "
+        :class="{
+            'font-semibold': index == activeIndex,
+            'relative'     : index == activeIndex,
+        }"
     > 
         {{ text }}
+
+        <div 
+            class="
+                absolute
+                w-full
+                h-[2px]
+                bg-white
+                bottom-0
+            "
+            :class="
+            {
+                'block' : index == activeIndex,
+                'hidden': index != activeIndex,
+            }"
+        > 
+        </div>
+
     </NuxtLink>
 
 </template>

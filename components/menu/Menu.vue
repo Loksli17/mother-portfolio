@@ -9,11 +9,33 @@
     }>()
 
 
-    const toggle              = ref<boolean>(false);
-    const left                = ref<number>(0);
-    const activeMenuLinkIndex = ref<number>(0);
+    const toggle      = ref<boolean>(false);
+    const left        = ref<number>(0);
+    const activeIndex = ref<number>(0);
     
     let root = ref<HTMLDivElement | null>(null);
+
+
+    const countActiveIndex = (scrollY: number) => 
+    {
+        if(scrollY == scrollMaxValue())
+        {
+            activeIndex.value = root.value!.children.length - 1;
+            return;
+        }
+
+        for(let i = 0; i < root.value!.children.length; i++)
+        {
+            const offset = (root.value!.children[i] as HTMLElement).offsetTop;
+            const height = (root.value!.children[i] as HTMLElement).getBoundingClientRect().height;
+
+            if(scrollY < offset + height)
+            {
+                activeIndex.value = i;
+                break;
+            }
+        }
+    }
 
 
     onMounted(() => 
@@ -26,27 +48,13 @@
             {
                 toggle.value = false;
             }
+
+            countActiveIndex(window.scrollY);
         });
 
         window.addEventListener('scroll', (e: Event) => 
         {
-            if(scrollY == scrollMaxValue())
-            {
-                activeMenuLinkIndex.value = root.value!.children.length - 1;
-                return;
-            }
-
-            for(let i = 0; i < root.value!.children.length; i++)
-            {
-                const offset = (root.value!.children[i] as HTMLElement).offsetTop;
-                const height = (root.value!.children[i] as HTMLElement).getBoundingClientRect().height;
-
-                if(scrollY < offset + height)
-                {
-                    activeMenuLinkIndex.value = i;
-                    break;
-                }
-            }
+            countActiveIndex(window.scrollY);
         });
 
         root = inject('root')!;
@@ -115,7 +123,13 @@
             auto-cols-max 
             content-center
         ">
-            <LinkItem @click-scroll="scroll" v-for="link in links" :text="link"></LinkItem>
+            <LinkItem 
+                @click-scroll="scroll" 
+                v-for="(link, index) in links" :text="link"
+                :index="index"
+                :active-index="activeIndex"
+            >
+            </LinkItem>
 
         </div>
 
@@ -172,7 +186,15 @@
                 :class="{ 'opacity-0': !toggle, 'opacity-100': toggle}"
             >  
 
-                <LinkItem @click-scroll="scroll($event, 200)" v-for="link in links" :text="link"></LinkItem>
+                <LinkItem 
+                    class="w-max"
+                    @click-scroll="scroll($event, 200)" 
+                    v-for="(link, index) in links" 
+                    :text="link"
+                    :index="index"
+                    :active-index="activeIndex"
+                >
+                </LinkItem>
 
             </div>
 
