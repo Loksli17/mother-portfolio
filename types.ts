@@ -18,3 +18,10 @@ export interface IImage
     file: string;
     tags: Array<string>;
 }
+
+
+export interface IStepItem
+{
+    header: string;
+    text  : string;
+}

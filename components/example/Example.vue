@@ -117,17 +117,6 @@
         <div>
             <component :is="activeWrapper"></component>
         </div>
-
-        <Circle 
-            :size="280" 
-            class="
-            top-[-120px] 
-            right-[-140px] 
-            w-1024:right-[-285px] 
-            w-1024:bottom-[-160px]
-            w-1024:opacity-30
-        "
-        />
     
     </div>
 
