@@ -35,16 +35,24 @@
             grid-flow-col 
             auto-cols-[320px] 
             justify-between 
-            w-1750:auto-cols-[280px] 
-            w-1520:auto-cols-[240px] 
-            w-1450:auto-cols-[210px] 
+
+            w-1750:auto-cols-[240px] 
+            w-1520:auto-cols-[220px] 
+            w-1450:auto-cols-[190px] 
             w-1280:grid-cols-1 
+            
             gap-11 
+            w-1750:gap-9
+
             w-1280:gap-12
             w-1280:grid-flow-row
         ">
 
-            <StepItem v-for="(step, index) in steps" :step="step" :index="index + 1"></StepItem>            
+            <StepItem 
+                v-for="(step, index) in steps" 
+                :step="step" 
+                :index="index + 1"
+            ></StepItem>
 
         </div>
 

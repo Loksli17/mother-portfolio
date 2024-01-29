@@ -20,15 +20,32 @@
             py-3 
             px-6 
             rounded
-            w-1024:py-2 w-1024:px-5 bg-default w-max font-semibold text-[34px] w-1024:text-[28px] w-750:text-[24px]">
+            w-1024:py-2 
+            w-1024:px-5 
+            bg-default 
+            w-max 
+            font-semibold 
+            text-[34px] 
+            w-1024:text-[28px] 
+            w-750:text-[24px]"
+        >
             {{ index }}
         </div>
 
         <div>
-            <h3 class=" text-[34px] w-1024:text-[30px] w-750:text-[25px] font-medium"> {{ step.header }} </h3>
+            <h3 class=" 
+                text-[34px] 
+                w-1750:text-[30px]
+                w-1280:text-[28px]
+                w-1024:text-[26px] 
+                w-750:text-[22px] 
+                font-medium
+            "> 
+                {{ step.header }} 
+            </h3>
         </div>
 
-        <div class=" text-xl w-1024:text-lg">
+        <div class=" text-xl w-1450:text-lg w-1024:text-base">
             <p> {{ step.text }} </p>
         </div>
 
