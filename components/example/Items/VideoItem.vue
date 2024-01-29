@@ -22,7 +22,7 @@
 
             <ClientOnly>
 
-                <video controls muted class="w-full h-[309px] w-1024:h-[250px] bg-black rounded-t-[10px]" :poster="useImgUrl(`preview/${video.preview}`)">
+                <video controls muted class="w-full h-[309px] shadow-xl w-1024:h-[250px] bg-black rounded-t-[10px]" :poster="useImgUrl(`preview/${video.preview}`)">
 
                     <source :src="useVideoUrl(video.file)" type="video/mp4" />
 
@@ -32,7 +32,7 @@
 
         </div>
 
-        <div class="p-7 grid gap-5 w-1024:p-4 bg-default rounded-b-[10px] w-full">
+        <div class="p-7 grid gap-5 w-1024:p-4 bg-default rounded-b-[10px] w-full ">
 
             <div class=" text-[25px] w-1024:text-[20px]">
                 {{ video.name }}

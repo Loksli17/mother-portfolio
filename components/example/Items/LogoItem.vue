@@ -31,10 +31,21 @@
                         cursor-pointer
                         bg-slate-100
                         grid justify-items-center items-center
+                        overflow-hidden
+                        shadow-xl
                     "
                 >
 
-                    <img class="" :src="useImgUrl(`${logo.file}`)">
+                    <div :style="{backgroundImage: `url(${useImgUrl(`${logo.file}`)})`}" class="
+                        w-full 
+                        h-full 
+                        bg-center 
+                        bg-cover 
+                        hover:scale-[1.2] 
+                        transition-transform
+                    ">
+                        
+                    </div>
 
                 </div>
                 

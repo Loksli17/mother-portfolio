@@ -31,6 +31,7 @@
                         rounded-t-[10px]
                         cursor-pointer
                         overflow-hidden
+                        shadow-2xl
                     "
                 >
 

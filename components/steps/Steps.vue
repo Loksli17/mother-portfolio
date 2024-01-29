@@ -68,6 +68,19 @@
             w-1024:opacity-30
         "
         />
+
+        <Circle 
+            :size="280" 
+            :border-color="'#009CA6'"
+            class="
+                absolute
+                top-[-210px] 
+                right-[190px] 
+                w-1024:right-[-285px] 
+                w-1024:bottom-[-160px]
+                w-1024:opacity-30
+            "
+        />
         
     </div>
 
