@@ -45,7 +45,7 @@
             </h3>
         </div>
 
-        <div class=" text-lg">
+        <div class=" text-xl  w-1280:text-lg">
             <p> {{ step.text }} </p>
         </div>
 

@@ -55,10 +55,12 @@
         gap-[80px]
 
         w-1024:mb-[20px]
+        w-1024:py-[65px]
         w-1024:p-[50px]
         w-1024:gap-[50px]
         
         w-750:gap-[30px]
+        w-750:py-[65px]
         w-750:p-[30px]
 
         relative

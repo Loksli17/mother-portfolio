@@ -21,10 +21,10 @@
         grid 
         gap-[120px]
         overflow-hidden
-        w-1280:gap-[70px]
+        w-1280:gap-[50px]
         
         w-1024:py-[100px]
-        w-640:py-[80px]
+        w-640:py-[65px]
         py-[120px]
     ">
 

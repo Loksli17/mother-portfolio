@@ -28,8 +28,13 @@
 
     <div class=" 
         p-[80px] 
+
+        w-1024:py-[65px] 
+        w-640:py-[65px]
+
         w-1024:p-[50px] 
         w-640:p-[30px] 
+        
         bg-default 
         grid 
         gap-[30px]
