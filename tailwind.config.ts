@@ -18,7 +18,9 @@ export default {
 
             gridTemplateColumns: {
                 'repeat-min-540': 'repeat(auto-fill, minmax(540px, 1fr))',
+                'repeat-min-500': 'repeat(auto-fill, minmax(500px, 1fr))',
                 'repeat-min-440': 'repeat(auto-fill, minmax(440px, 1fr))',
+                'repeat-min-370': 'repeat(auto-fill, minmax(370px, 1fr))',
                 'repeat-min-320': 'repeat(auto-fill, minmax(320px, 1fr))',
             },
 

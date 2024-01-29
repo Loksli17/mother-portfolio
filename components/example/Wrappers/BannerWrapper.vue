@@ -11,7 +11,9 @@
 <template>
 
     <ItemWrapper>
+        
         <BannerItem v-for="banner in banners" :banner="banner"></BannerItem>
+    
     </ItemWrapper>
 
 </template>
