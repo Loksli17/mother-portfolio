@@ -9,7 +9,9 @@
     import Footer  from '~/components/footer/Footer.vue';
     import Menu    from '~/components/menu/Menu.vue';
 
-    const root = ref<HTMLDivElement | null>(null);
+    
+    const root                 = ref<HTMLDivElement | null>(null);
+    const links: Array<string> = ['Приветствие', 'Обо мне', 'Примеры работы', 'Процесс', 'Контакты'];
 
     provide('root', root);
 
@@ -23,7 +25,7 @@
     <div class="overflow-hidden">
 
         <Menu 
-            :links="['Приветствие', 'Обо мне', 'Примеры работы', 'Процесс', 'Контакты']">
+            :links="links">
         </Menu>
 
 
@@ -33,7 +35,7 @@
             <About/>
             <Example/>
             <Steps/>
-            <Footer/>
+            <Footer :links="links"/>
 
         </div>
 

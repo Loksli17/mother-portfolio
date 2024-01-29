@@ -15,6 +15,7 @@
     
     let root = ref<HTMLDivElement | null>(null);
 
+    const scrollToElement = scrollToElementFactory(root);
 
     const countActiveIndex = (scrollY: number) => 
     {
@@ -72,19 +73,10 @@
     });
 
 
-    const scroll = (e: PointerEvent, ms: number = 0) => 
+    const clickScroll = (e: PointerEvent, ms: number = 0) => 
     {   
         toggle.value = false;
-
-        setTimeout(() => 
-        {
-            const target   = (e.target as HTMLElement);
-            const children = target.parentElement?.children;
-            const index    = Array.prototype.indexOf.call(children, target);
-
-            root.value!.children[index].scrollIntoView( {behavior: 'smooth'} );
-
-        }, ms);
+        scrollToElement(e, ms);
     } 
 
 </script>
@@ -124,7 +116,7 @@
             content-center
         ">
             <LinkItem 
-                @click-scroll="scroll" 
+                @click-scroll="clickScroll" 
                 v-for="(link, index) in links" :text="link"
                 :index="index"
                 :active-index="activeIndex"
@@ -194,7 +186,7 @@
 
                 <LinkItem 
                     class="w-max"
-                    @click-scroll="scroll($event, 200)" 
+                    @click-scroll="clickScroll($event, 200)" 
                     v-for="(link, index) in links" 
                     :text="link"
                     :index="index"

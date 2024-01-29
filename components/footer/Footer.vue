@@ -1,9 +1,24 @@
 
 <script setup lang="ts">
 
-    import H2 from '../global/H2.vue';
+    import H2       from '../global/H2.vue';
+    import LinkItem from './LinkItem.vue';
 
-    const year: number = new Date().getFullYear();
+    defineProps<{
+        links: Array<string>;
+    }>()
+
+
+    let root = ref<HTMLDivElement | null>(null);
+    let scrollToElement: (e: PointerEvent, ms?: number | undefined) => void;
+
+    const year : number = new Date().getFullYear();
+    
+    onMounted(() => 
+    {
+        root = inject('root')!;
+        scrollToElement = scrollToElementFactory(root);
+    });
 
 </script>
 
@@ -221,10 +236,17 @@
 
             <div class="grid gap-3 w-1024:gap-2 content-end">
 
-                <NuxtLink class="text-[22px] w-1280:text-[19px] w-750:text-[18px]">Приветствие</NuxtLink>
-                <NuxtLink class="text-[22px] w-1280:text-[19px] w-750:text-[18px]">Обо мне</NuxtLink>
-                <NuxtLink class="text-[22px] w-1280:text-[19px] w-750:text-[18px]">Примеры работ</NuxtLink>
-                <NuxtLink class="text-[22px] w-1280:text-[19px] w-750:text-[18px]">Контакты</NuxtLink>
+                <ClientOnly>
+
+                    <LinkItem 
+                        :text="link" 
+                        @click-scroll="scrollToElement" 
+                        v-for="link in links"
+                    >
+                    </LinkItem>
+
+                </ClientOnly>
+
 
             </div>
             

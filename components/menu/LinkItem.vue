@@ -26,15 +26,15 @@
             transition-all
             after:absolute
             after:w-full
-            after:h-[2px]
             after:bg-white
             after:bottom-0
             hover:text-[#009da7]
+            relative
         "
         :class="{
             'font-semibold': index == activeIndex,
-            'relative'     : index == activeIndex,
-            'after:block'  : index == activeIndex
+            'after:block'  : index == activeIndex,
+            'after:h-[2px]': index == activeIndex,
         }"
     > 
         {{ text }}
