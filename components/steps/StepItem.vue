@@ -34,18 +34,18 @@
 
         <div>
             <h3 class=" 
-                text-[34px] 
-                w-1750:text-[30px]
-                w-1280:text-[28px]
-                w-1024:text-[26px] 
-                w-750:text-[22px] 
+                text-[31px] 
+                w-1750:text-[28px]
+                w-1280:text-[26px]
+                w-1024:text-[24px] 
+                w-750:text-[20px] 
                 font-medium
             "> 
                 {{ step.header }} 
             </h3>
         </div>
 
-        <div class=" text-xl w-1450:text-lg w-1024:text-base">
+        <div class=" text-lg">
             <p> {{ step.text }} </p>
         </div>
 

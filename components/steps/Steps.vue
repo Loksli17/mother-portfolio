@@ -33,7 +33,7 @@
         <div class="
             grid 
             grid-flow-col 
-            auto-cols-[320px] 
+            auto-cols-[280px] 
             justify-between 
 
             w-1750:auto-cols-[240px] 

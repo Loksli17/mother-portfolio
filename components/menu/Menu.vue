@@ -14,9 +14,9 @@
     const activeIndex = ref<number>(0);
     
     let root = ref<HTMLDivElement | null>(null);
+    let scrollToElement: (e: PointerEvent, ms?: number | undefined) => void;
 
-    const scrollToElement = scrollToElementFactory(root);
-
+    
     const countActiveIndex = (scrollY: number) => 
     {
         if((scrollMaxValue() - scrollY) <= 40)
@@ -59,6 +59,7 @@
         });
 
         root = inject('root')!;
+        scrollToElement = scrollToElementFactory(root);
     });
 
 
@@ -108,25 +109,30 @@
     ">
 
         <div class="
-            w-1024:hidden 
+            w-1100:hidden 
             grid 
-            gap-12 
+            gap-10 
             grid-flow-col 
             auto-cols-max 
             content-center
         ">
-            <LinkItem 
-                @click-scroll="clickScroll" 
-                v-for="(link, index) in links" :text="link"
-                :index="index"
-                :active-index="activeIndex"
-            >
-            </LinkItem>
 
+            <ClientOnly>
+
+                <LinkItem 
+                    @click-scroll="clickScroll" 
+                    v-for="(link, index) in links" :text="link"
+                    :index="index"
+                    :active-index="activeIndex"
+                >
+                </LinkItem>
+
+            </ClientOnly>
+        
         </div>
 
 
-        <div class="hidden w-1024:grid ">
+        <div class="hidden w-1100:grid ">
             <Burger v-model:toggle="toggle"></Burger>
         </div>
 
@@ -135,8 +141,8 @@
             grid 
             grid-cols-[40px_40px] 
             gap-[30px] 
-            w-1024:grid-cols-[35px_35px] 
-            w-1024:gap-[20px] 
+            w-1100:grid-cols-[35px_35px] 
+            w-1100:gap-[20px] 
             content-center
         ">
 
@@ -153,7 +159,7 @@
             >
                 <img src="assets/img/mail.png"/>
             </div>
-            
+
         </div>
         
     </div>
