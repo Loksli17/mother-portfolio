@@ -26,7 +26,7 @@
 
 <template>
 
-    <div class=" 
+    <div class=" border-t-white border-t-8
         p-[80px] 
 
         w-1024:py-[65px] 
@@ -38,6 +38,8 @@
         bg-default 
         grid 
         gap-[30px]
+        relative
+        overflow-hidden
     ">
 
         <H2 :text="'Контакты'"></H2>
@@ -256,6 +258,21 @@
             </div>
             
         </div>
+
+
+        <Circle 
+            :size="280" 
+            :background="'#fff'"
+            :border-width="0"
+            class="
+                absolute
+                top-[-190px] 
+                right-[190px] 
+                w-1024:right-[-285px] 
+                w-1024:bottom-[-160px]
+                w-1024:opacity-30
+            "
+        />
 
     </div>
 
