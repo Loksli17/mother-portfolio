@@ -53,7 +53,15 @@
 
         </div>
 
-        <div class="p-7 grid gap-5 w-1024:p-4 bg-default rounded-b-[10px] w-full">
+        <div class="
+            p-7 
+            grid 
+            gap-5 
+            w-1024:p-4 
+            bg-default 
+            rounded-b-[10px] 
+            w-full
+        ">
 
             <div class=" text-[25px] w-1024:text-[20px]">
                 {{ logo.name }}
@@ -89,7 +97,10 @@
 
         <PopUp v-model:toggle="showPopUp">
 
-            <img class=" w-[500px] w-750:w-full " :src="useImgUrl(`${logo.file}`)">
+            <img 
+                class=" w-[850px] w-1520:w-[600px] w-750:w-full " 
+                :src="useImgUrl(`${logo.file}`)
+            ">
 
         </PopUp>
 

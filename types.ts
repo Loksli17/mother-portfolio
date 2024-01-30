@@ -24,4 +24,5 @@ export interface IStepItem
 {
     header: string;
     text  : string;
+    style : Record<string, string>;
 }

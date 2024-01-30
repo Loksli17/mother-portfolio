@@ -5,7 +5,6 @@
 
     import X from '../global/X.vue';
 
-
     const props = defineProps<{
         toggle: boolean
     }>();
@@ -45,6 +44,9 @@
             bg-black
             bg-opacity-90
             justify-items-center
+            px-10
+            w-750:px-6
+            border-box
         "
     >
 
@@ -54,7 +56,6 @@
             w-1024:p-8 
             w-640:p-4 
             rounded-md 
-            w-750:w-[85%] 
             max-h-[80%] 
             overflow-y-auto
         ">
