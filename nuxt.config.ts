@@ -35,7 +35,8 @@ export default defineNuxtConfig(
     modules: [['@nuxtjs/google-fonts', 
     {
         families: {
-            Roboto: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+            Roboto            : [100, 200, 300, 400, 500, 600, 700, 800, 900],
+            'Roboto Condensed': [100, 200, 300, 400, 500, 600, 700, 800, 900],
         }
     }]],
 

@@ -21,17 +21,16 @@
         w-1280:gap-4
     ">
 
-        <div class=" 
+        <div class=" font-Roboto-condensed font-bold leading-[80px]
             rounded
             bg-default  
-            font-semibold 
-            text-[55px] 
-            w-1024:text-[42px] 
-            w-750:text-[36px]
+            text-[80px]
             w-[80px]
             h-[80px]
-            w-1024:w-[50px]
-            w-1024:h-[50px]
+            w-1024:text-[60px]
+            w-1024:w-[60px]
+            w-1024:h-[60px]
+            w-1024:leading-[60px]
             relative
             overflow-hidden
         ">

@@ -39,7 +39,7 @@ export default {
         },
 
         fontFamily: {
-            'Roboto': [ 'Roboto' ],
+            'Roboto': [ 'Roboto' ], 'Roboto-condensed': ['Roboto Condensed'],
         },
 
         screens: {
