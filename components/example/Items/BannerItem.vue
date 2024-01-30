@@ -88,7 +88,10 @@
 
         <PopUp v-model:toggle="showPopUp">
 
-            <img class=" w-[500px] w-750:w-full" :src="useImgUrl(`${banner.file}`)">
+            <img 
+                class=" w-[850px] w-1520:w-[600px] w-750:w-full " 
+                :src="useImgUrl(`${banner.file}`)"
+            >
 
         </PopUp>
 

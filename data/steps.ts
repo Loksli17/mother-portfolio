@@ -1,8 +1,8 @@
 import type { IStepItem } from "~/types";
 
 
-const steps: Array<IStepItem> = [
-
+const steps: Array<IStepItem> = 
+[
     {
         header: 'Контакт',
         text  : 'Если вам нужно сделать видеоролик, визитку или баннер, напишите мне на почту или телеграм.'

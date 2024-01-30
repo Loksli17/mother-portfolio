@@ -1,7 +1,8 @@
 import type { IImage } from "~/types";
 
 
-const banners: Array<IImage> = [
+const banners: Array<IImage> = 
+[
     {
         name: 'Бизнес-видео. Скидки',
         file: 'banners/bv-discount.jpg',

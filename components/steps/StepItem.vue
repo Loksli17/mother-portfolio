@@ -14,7 +14,12 @@
 
 <template>
 
-    <div class="grid gap-7 grid-rows-[max-content_max-content_1fr] w-1280:gap-4">
+    <div class="
+        grid 
+        gap-7 
+        grid-rows-[max-content_max-content_1fr] 
+        w-1280:gap-4
+    ">
 
         <div class=" 
             py-3 
