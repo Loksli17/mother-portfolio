@@ -22,19 +22,24 @@
     ">
 
         <div class=" 
-            py-3 
-            px-6 
             rounded
-            w-1024:py-2 
-            w-1024:px-5 
-            bg-default 
-            w-max 
+            bg-default  
             font-semibold 
-            text-[34px] 
-            w-1024:text-[28px] 
-            w-750:text-[24px]"
-        >
-            {{ index }}
+            text-[55px] 
+            w-1024:text-[42px] 
+            w-750:text-[36px]
+            w-[80px]
+            h-[80px]
+            w-1024:w-[50px]
+            w-1024:h-[50px]
+            relative
+            overflow-hidden
+        ">
+
+            <div :style="step.style" class="absolute">
+                {{ index }}
+            </div>
+
         </div>
 
         <div>
