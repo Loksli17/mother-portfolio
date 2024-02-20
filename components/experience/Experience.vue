@@ -27,6 +27,9 @@
 
         w-1280:grid-cols-1
         w-1280:gap-14
+
+        relative
+        overflow-hidden
     ">
 
         <div class="grid gap-16 w-1280:gap-8">
@@ -73,7 +76,7 @@
 
                 </div>
 
-                <div class="grid items-start p-8 w-1024:p-5 gap-6 w-1024:gap-3">
+                <div class="grid items-start py-10 px-8 w-1024:py-5 w-1024:px-4 gap-6 w-1024:gap-3">
 
                     <div class=" text-4xl font-semibold w-1024:text-xl w-750:text-lg">
                         <h4>ХГТУ [ТОГУ]</h4>
@@ -92,6 +95,20 @@
                 <Circle :size="170" class=" -bottom-9 -right-9 w-1024:-right-14 w-750:hidden"/>
 
             </div>
+
+            <Circle 
+                :size="260" 
+                :background="'#fff'"
+                :border-width="0"
+                class="
+                    absolute
+                    top-[-200px] 
+                    left-[190px] 
+                    w-1024:left-[-285px] 
+                    w-1024:top-[-160px]
+                    w-1024:opacity-30
+                "
+            />
 
         </div>
 

@@ -58,6 +58,9 @@
 
         w-640:pl-[30px]
         w-640:pr-[30px]
+
+        relative
+        overflow-hidden
     ">
 
         <div class="
@@ -197,6 +200,21 @@
             </div>
 
         </div>
+
+
+        <Circle 
+            :size="280" 
+            :background="'#fff'"
+            :border-width="0"
+            class="
+            absolute
+            bottom-[-170px] 
+            right-[-80px] 
+            w-1024:right-[-285px] 
+            w-1024:bottom-[-160px]
+            w-1024:opacity-30
+        "
+        />
 
     </div>
 

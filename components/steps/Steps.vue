@@ -73,7 +73,7 @@
             :border-color="'#009CA6'"
             class="
                 absolute
-                top-[-210px] 
+                top-[-230px] 
                 right-[190px] 
                 w-1024:right-[-285px] 
                 w-1024:bottom-[-160px]
