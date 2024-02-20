@@ -108,8 +108,8 @@
         w-640:px-[30px]
     ">
 
-        <div class="
-            w-1100:hidden 
+        <div class=" 
+            w-1280:hidden 
             grid 
             gap-10 
             grid-flow-col 
@@ -132,7 +132,7 @@
         </div>
 
 
-        <div class="hidden w-1100:grid ">
+        <div class="hidden w-1280:grid ">
             <Burger v-model:toggle="toggle"></Burger>
         </div>
 
@@ -141,8 +141,8 @@
             grid 
             grid-cols-[40px_40px] 
             gap-[30px] 
-            w-1100:grid-cols-[35px_35px] 
-            w-1100:gap-[20px] 
+            w-1280:grid-cols-[35px_35px] 
+            w-1280:gap-[20px] 
             content-center
         ">
 

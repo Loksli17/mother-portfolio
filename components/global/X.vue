@@ -10,6 +10,7 @@
         grid-rows-[3px_3px]
         content-center
         gap-[21px]
+        cursor-pointer
     "
     >
 

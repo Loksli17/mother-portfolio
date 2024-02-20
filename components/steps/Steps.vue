@@ -17,7 +17,6 @@
         px-[80px] 
         w-1024:px-[50px]
         w-640:px-[30px]
-        bg-default-50
         grid 
         gap-[120px]
         overflow-hidden

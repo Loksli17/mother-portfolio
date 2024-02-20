@@ -1,3 +1,4 @@
+import { Experience } from "#build/components";
 
 export type TabType = 'Video' | 'Banner' | 'Logo';
 
@@ -25,4 +26,12 @@ export interface IStepItem
     header: string;
     text  : string;
     style : Record<string, string>;
+}
+
+
+export interface IExperienceItem
+{
+    yearStart: number;
+    yearEnd  : number;
+    name     : string;
 }
