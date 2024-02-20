@@ -22,9 +22,8 @@
 
         <div class="grid grid-rows-[max-content_1fr] gap-7 justify-items-center translate-y-6">
             
-            <Square :size="25"/>
-
-            <Line v-if="index != itemsAmount - 1" :width="3"/>
+            <div :class=" `rounded bg-default w-[25px] h-[25px] w-1024:w-[20px] w-1024:h-[20px]`"></div>
+            <div v-if="index != itemsAmount - 1" :class='`h-full w-[3px] bg-default-60`'></div>
 
         </div>
 
