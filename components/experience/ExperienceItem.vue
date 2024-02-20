@@ -4,11 +4,12 @@
     
     import type { IExperienceItem } from '~/types';
     import Square                   from '../global/Square.vue';
+    import Line                     from '../global/Line.vue';
 
     defineProps<{
-        experience: IExperienceItem,
-        length    : number,
-        index     : number,
+        experience : IExperienceItem,
+        itemsAmount: number,
+        index      : number,
     }>();
 
 </script>
@@ -23,7 +24,7 @@
             
             <Square :size="25"/>
 
-            <div v-if="index != length - 1" class="h-full w-[3px] bg-default-60"></div>
+            <Line v-if="index != itemsAmount - 1" :width="3"/>
 
         </div>
 
@@ -45,6 +46,5 @@
         </div>
 
     </div>
-
 
 </template>

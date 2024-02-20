@@ -37,7 +37,7 @@
                 <ExperienceItem 
                     v-for="(item, index) in experience" 
                     :experience="item"
-                    :length="experience.length"
+                    :items-amount="experience.length"
                     :index="index"
                 />
 
