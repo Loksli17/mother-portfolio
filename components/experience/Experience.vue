@@ -23,9 +23,12 @@
         py-[120px]
 
         grid grid-cols-2 gap-20
+
+        w-1280:grid-cols-1
+        w-1280:gap-14
     ">
 
-        <div class="grid gap-16">
+        <div class="grid gap-16 w-1280:gap-12">
 
             <H3 :text="'Опыт работы'"></H3>
             

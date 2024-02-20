@@ -34,4 +34,5 @@ export interface IExperienceItem
     yearStart: number;
     yearEnd  : number;
     name     : string;
+    post     : string;
 }
