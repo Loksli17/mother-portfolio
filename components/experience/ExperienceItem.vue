@@ -3,8 +3,6 @@
 <script setup lang="ts">
     
     import type { IExperienceItem } from '~/types';
-    import Square                   from '../global/Square.vue';
-    import Line                     from '../global/Line.vue';
 
     defineProps<{
         experience : IExperienceItem,

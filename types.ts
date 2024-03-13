@@ -29,10 +29,19 @@ export interface IStepItem
 }
 
 
+
 export interface IExperienceItem
 {
     yearStart: number;
     yearEnd  : number;
     name     : string;
     post     : string;
+}
+
+
+
+export interface ITool
+{
+    img : string;
+    name: string;
 }

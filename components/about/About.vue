@@ -1,33 +1,11 @@
 
 <script setup lang="ts">
 
-    import H2 from '../global/H2.vue';
-    import H3 from '../global/H3.vue';
-    import P  from '../global/P.vue';
-
-    interface ITool
-    {
-        img : string;
-        name: string;
-    }
-
-    const tools: Ref<Array<ITool>> = ref(
-    [
-        {
-            img: 'ps.png',
-            name: 'Adobe Photoshop',
-        },
-
-        {
-            img: 'AE.png',
-            name: 'Adobe After Effects',
-        },
-
-        {
-            img: 'corel.png',
-            name: 'Corel Draw',
-        },
-    ]);
+    import H2       from '../global/H2.vue';
+    import H3       from '../global/H3.vue';
+    import P        from '../global/P.vue';
+    import tools    from '~/data/tools';
+    import ToolItem from './ToolItem.vue';
 
 </script>
 
@@ -183,19 +161,21 @@
 
                 <H3 :text="'Инструменты'"></H3>
 
-                <ClientOnly>
+                <div class="
+                    grid 
+                    grid-flow-col 
+                    auto-cols-[85px] 
+                    gap-[30px] 
+                    w-1024:auto-cols-[50px] 
+                    w-1024:gap-[18px]
+                    items-center
+                ">
 
-                    <div class="grid grid-flow-col auto-cols-[85px] gap-[30px] w-1024:auto-cols-[50px] w-1024:gap-[18px]">
-
-                        <div v-for="tool in tools">
-
-                            <img :alt="tool.name" :title="tool.name" :src="useImgUrl(tool.img)"/>
-
-                        </div>
-                
+                    <div v-for="tool in tools">
+                        <ToolItem :tool="tool"></ToolItem>
                     </div>
-
-                </ClientOnly>
+            
+                </div>
 
             </div>
 
