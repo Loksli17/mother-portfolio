@@ -56,7 +56,9 @@
             <div class="
                 grid  
                 content-center
-                item-center
+                grid-cols-[max-content_max-content]
+                items-center
+                gap-3
             ">
 
                 <a 
@@ -75,6 +77,22 @@
                     {{ contact.text }}
 
                 </a>
+
+                <div 
+                    class=" 
+                        py-1
+                        px-2 
+                        cursor-pointer 
+                        rounded 
+                        bg-default-60 
+                        hover:bg-default 
+                        transition-all
+                        text-sm
+                    "
+                    @click="copyToClipboard(contact.link, contact.copyMsg)"
+                >
+                    Copy
+                </div>
 
             </div>
 

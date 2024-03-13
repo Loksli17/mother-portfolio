@@ -48,8 +48,9 @@ export interface ITool
 
 export interface IContact
 {
-    img : string;
-    link: string;
-    name: string;
-    text: string;
+    img    : string;
+    link   : string;
+    name   : string;
+    text   : string;
+    copyMsg: string;
 }
