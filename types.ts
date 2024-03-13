@@ -1,5 +1,3 @@
-import { Experience } from "#build/components";
-
 export type TabType = 'Video' | 'Banner' | 'Logo';
 
 
@@ -29,10 +27,30 @@ export interface IStepItem
 }
 
 
+
 export interface IExperienceItem
 {
     yearStart: number;
     yearEnd  : number;
     name     : string;
     post     : string;
+}
+
+
+
+export interface ITool
+{
+    img : string;
+    name: string;
+}
+
+
+
+export interface IContact
+{
+    img    : string;
+    link   : string;
+    name   : string;
+    text   : string;
+    copyMsg: string;
 }

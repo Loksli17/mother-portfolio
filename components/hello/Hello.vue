@@ -1,11 +1,12 @@
 
 <script setup lang="ts">
 
-    import H2     from '../global/H2.vue';
-    import H3     from '../global/H3.vue';
-    import Circle from '../global/Circle.vue';
-    import Button from '../global/Button.vue';
-    import P      from '../global/P.vue';
+    import H2       from '../global/H2.vue';
+    import H3       from '../global/H3.vue';
+    import Circle   from '../global/Circle.vue';
+    import A        from './A.vue';
+    import P        from '../global/P.vue';
+    import contacts from '../../data/contacts';
 
 </script>
  
@@ -51,7 +52,7 @@
             <div>
 
                 <PointsBox :cols-amount="7" :rows-amount="3"></PointsBox>
-                
+
                 <H2 :text="'Видеомонтаж'"></H2>
                 <H2 :text="'Графический дизайн'" class=" leading-10"></H2>
 
@@ -62,7 +63,7 @@
 
                 <div>
 
-                    <H3 :text="'Здравствуйте, меня зовут'" > </H3>
+                    <H3 :text="'Здравствуйте, меня зовут'"> </H3>
                     <H3 :text="'Светлана Мишина'" class="text-[#009CA6]"> </H3>
 
                 </div>
@@ -70,7 +71,12 @@
                 <P :text="
                     'Я графический дизайнер и видеомонтажер с большим опытом создания видеороликов и рекламной продукции для бизнеса'
                 "></P>
-                <Button @click="copyToClipboard('https://t.me/Svetlana_Mi6', 'Аккаунт в Telegram был скопирован')" :text="'Cвязаться'"></Button>
+
+                <A 
+                    :href="contacts[0].link" 
+                    :text="'Cвязаться'"
+                >
+                </A>
 
             </div>
 
@@ -109,43 +115,32 @@
             w-640:pl-[30px]
             w-640:pr-[30px]
         ">
-            
+
             <div class="relative">
-                
-                <img 
-                    class="
+
+                <img class="
                         rounded-[120px] 
                         w-1520:rounded-[90px] 
                         w-1280:rounded-[60px] 
                         w-1024:rounded-[40px]
                         bg-[#E1FDFF]
-                    " 
-                    src="assets/img/women1.png" 
-                    alt=""
-                >
-                
-                <PointsBox 
-                    class="absolute bottom-[-58px] left-[120px] -z-10 w-1280:hidden" 
-                    :cols-amount="8" 
-                    :rows-amount="4"
-                    :opacity="0.6"
-                >
+                    " src="assets/img/women1.png" alt="">
+
+                <PointsBox class="absolute bottom-[-58px] left-[120px] -z-10 w-1280:hidden" :cols-amount="8"
+                    :rows-amount="4" :opacity="0.6">
                 </PointsBox>
-            
+
             </div>
-            
+
         </div>
 
-        <Circle 
-            :size="360" 
-            class="
+        <Circle :size="360" class="
                 bottom-[-220px] 
                 right-[-140px] 
                 w-1024:right-[-285px] 
                 w-1024:bottom-[-160px]
                 w-1024:opacity-30
-            "
-        />
+            " />
 
     </div>
 
