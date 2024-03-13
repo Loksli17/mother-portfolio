@@ -1,8 +1,11 @@
 
 <script setup lang="ts">
 
-    import Burger   from '../global/Burger.vue';
-    import LinkItem from './LinkItem.vue';
+    import Burger      from '../global/Burger.vue';
+    import LinkItem    from './LinkItem.vue';
+    import contacts    from '~/data/contacts';
+    import ContactItem from './ContactItem.vue';
+
 
     defineProps<{
         links: Array<string>;
@@ -117,18 +120,14 @@
             content-center
         ">
 
-            <ClientOnly>
+            <LinkItem 
+                @click-scroll="clickScroll" 
+                v-for="(link, index) in links" 
+                :text="link" 
+                :index="index"
+                :active-index="activeIndex" 
+            />
 
-                <LinkItem 
-                    @click-scroll="clickScroll" 
-                    v-for="(link, index) in links" :text="link"
-                    :index="index"
-                    :active-index="activeIndex"
-                >
-                </LinkItem>
-
-            </ClientOnly>
-        
         </div>
 
 
@@ -139,29 +138,17 @@
 
         <div class="
             grid 
-            grid-cols-[40px_40px] 
+            grid-cols-[40px_40px_40px] 
             gap-[30px] 
-            w-1280:grid-cols-[35px_35px] 
+            w-1280:grid-cols-[30px_30px_30px] 
             w-1280:gap-[20px] 
             content-center
         ">
 
-            <div
-                class="cursor-pointer" 
-                @click="copyToClipboard('https://t.me/Svetlana_Mi6', 'Аккаунт в Telegram был скопирован')"
-            >
-                <img src="assets/img/tg.png"/>
-            </div>
-
-            <div
-                class="cursor-pointer"
-                @click="copyToClipboard('smi0504@mail.ru', 'Электронная почта была скопирована')"
-            >
-                <img src="assets/img/mail.png"/>
-            </div>
+            <ContactItem v-for="contact in contacts" :contact="contact"/>
 
         </div>
-        
+
     </div>
 
 
@@ -169,36 +156,34 @@
 
         <Teleport to="body">
 
-            <div
+            <div 
                 class=" 
-                transition-all
-                fixed 
-                h-screen 
-                w-screen 
-                bg-default 
-                z-10 
-                box-border 
-                pt-[90px] 
-                auto-rows-max
-                w-1024:px-[50px]
-                w-750:px-[30px]
-                gap-[25px]
-                top-0
-                grid
-            "
-                :style="{ left: `${left}px`}"
-                :class="{ 'opacity-0': !toggle, 'opacity-100': toggle}"
-            >  
+                    transition-all
+                    fixed 
+                    h-screen 
+                    w-screen 
+                    bg-default 
+                    z-10 
+                    box-border 
+                    pt-[90px] 
+                    auto-rows-max
+                    w-1024:px-[50px]
+                    w-750:px-[30px]
+                    gap-[25px]
+                    top-0
+                    grid
+                " 
+                :style="{ left: `${left}px`}" :class="{ 'opacity-0': !toggle, 'opacity-100': toggle}"
+            >
 
                 <LinkItem 
-                    class="w-max"
+                    class="w-max" 
                     @click-scroll="clickScroll($event, 200)" 
-                    v-for="(link, index) in links" 
-                    :text="link"
-                    :index="index"
+                    v-for="(link, index) in links"
+                    :text="link" 
+                    :index="index" 
                     :active-index="activeIndex"
-                >
-                </LinkItem>
+                />
 
             </div>
 

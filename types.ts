@@ -1,5 +1,3 @@
-import { Experience } from "#build/components";
-
 export type TabType = 'Video' | 'Banner' | 'Logo';
 
 
@@ -44,4 +42,14 @@ export interface ITool
 {
     img : string;
     name: string;
+}
+
+
+
+export interface IContact
+{
+    img    : string;
+    link   : string;
+    name   : string;
+    copyMsg: string;
 }

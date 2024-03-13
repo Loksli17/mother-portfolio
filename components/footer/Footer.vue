@@ -1,22 +1,26 @@
 
 <script setup lang="ts">
 
-    import H2       from '../global/H2.vue';
-    import LinkItem from './LinkItem.vue';
+    import H2          from '../global/H2.vue';
+    import LinkItem    from './LinkItem.vue';
+    import contacts    from '~/data/contacts';
+    import ContactItem from './ContactItem.vue';
 
+    
     defineProps<{
         links: Array<string>;
     }>()
 
 
-    let root = ref<HTMLDivElement | null>(null);
+    let   root         = ref<HTMLDivElement | null>(null);
+    const year: number = new Date().getFullYear();
+
     let scrollToElement: (e: PointerEvent, ms?: number | undefined) => void;
 
-    const year : number = new Date().getFullYear();
     
     onMounted(() => 
     {
-        root = inject('root')!;
+        root            = inject('root')!;
         scrollToElement = scrollToElementFactory(root);
     });
 
@@ -26,7 +30,9 @@
 
 <template>
 
-    <div class=" border-t-white border-t-8
+    <div class=" 
+        border-t-white 
+        border-t-8
         p-[80px] 
 
         w-1024:py-[65px] 
@@ -37,7 +43,7 @@
         
         bg-default 
         grid 
-        gap-[30px]
+        gap-[35px]
         relative
         overflow-hidden
     ">
@@ -62,140 +68,7 @@
                 w-1024:p-7
             ">
 
-                <div class="
-                    grid 
-                    grid-cols-[max-content_1fr] 
-                    gap-5 
-                    w-1024:gap-4 
-                    w-640:grid-cols-[max-content] 
-                    w-640:justify-center 
-                    w-640:justify-items-center
-                ">
-                    
-                    <div class="
-                        p-3 
-                        w-1024:p-2 
-                        bg-default-60 
-                        rounded-md 
-                        w-1024:rounded 
-                        w-max
-                    ">
-                        <img class="w-[45px]" src="assets/img/tg.png"/>
-                    </div>
-                    
-                    <div class="grid gap-2 w-640:justify-items-center">
-
-                        <h4 class=" 
-                            font-semibold 
-                            text-[24px] 
-                            w-1280:text-[21px] 
-                            w-750:text-[19px]
-                        ">
-                            Telegram
-                        </h4>
-
-                        <div class="
-                            grid 
-                            grid-cols-[max-content_max-content] 
-                            content-center
-                            item-center
-                            gap-3
-                        ">
-                            
-                            <span class="
-                                text-[19px] 
-                                w-1280:text-[18px] 
-                                w-750:text-[16px]
-                            ">
-                               t.me/Svetlana_Mi6
-                            </span>
-                            
-                            <div 
-                                class="
-                                    w-[25px] 
-                                    w-1280:w-[22px] 
-                                    w-750:w-[20px] 
-                                    cursor-pointer
-                                "
-                                @click="copyToClipboard('https://t.me/Svetlana_Mi6', 'Аккаунт в Telegram был скопирован')"
-                            >
-                                <img src="assets/img/copy-img.png" alt="">
-                            </div>
-                        
-                        </div>  <!-- https://t.me/Svetlana_Mi6 -->
-                         
-                    </div>
-
-                </div>
-
-                <div class="
-                    grid 
-                    grid-cols-[max-content_1fr] 
-                    gap-5 
-                    w-1024:gap-4 
-                    w-640:grid-cols-[max-content] 
-                    w-640:justify-center w-640:justify-items-center
-                ">
-
-                    <div class="
-                        p-3 
-                        w-1024:p-2 
-                        bg-default-60 
-                        rounded-md 
-                        w-1024:rounded 
-                        w-max
-                    ">
-                        <img class="w-[45px]" src="assets/img/mail.png"/>
-                    </div>
-
-                    <div class="
-                        grid 
-                        gap-2 
-                        w-640:justify-items-center
-                    ">
-
-                        <h4 class=" 
-                            font-semibold 
-                            text-[24px] 
-                            w-1280:text-[21px] 
-                            w-750:text-[19px]
-                        ">
-                            Электронная почта
-                        </h4>
-                        
-                            <div class="
-                                grid 
-                                grid-cols-[max-content_max-content] 
-                                content-center 
-                                item-center
-                                gap-3
-                            ">
-                            
-                                <span class="
-                                    text-[19px] 
-                                    w-1280:text-[18px] 
-                                    w-750:text-[16px]
-                                ">
-                                   smi0504@mail.ru
-                                </span>
-                            
-                                <div 
-                                    @click="copyToClipboard('smi0504@mail.ru', 'Электронная почта была скопирована')" 
-                                    class="
-                                        w-[25px] 
-                                        w-1280:w-[22px] 
-                                        w-750:w-[20px] 
-                                        cursor-pointer
-                                    "
-                                >
-                                    <img src="assets/img/copy-img.png" alt="">
-                                </div>
-                        
-                            </div>
-
-                    </div>
-
-                </div>
+                <ContactItem v-for="contact in contacts" :contact="contact"/>
 
             </div>
             
