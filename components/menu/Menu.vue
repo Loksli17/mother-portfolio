@@ -120,6 +120,8 @@
             content-center
         ">
 
+            <ClientOnly>
+
             <LinkItem 
                 @click-scroll="clickScroll" 
                 v-for="(link, index) in links" 
@@ -127,6 +129,8 @@
                 :index="index"
                 :active-index="activeIndex" 
             />
+
+            </ClientOnly>
 
         </div>
 
@@ -173,7 +177,13 @@
                     top-0
                     grid
                 " 
-                :style="{ left: `${left}px`}" :class="{ 'opacity-0': !toggle, 'opacity-100': toggle}"
+                :style="{ 
+                    left: `${left}px`
+                }" 
+                :class="{ 
+                    'opacity-0': !toggle, 
+                    'opacity-100': toggle
+                }"
             >
 
                 <LinkItem 
