@@ -1,6 +1,7 @@
 import type { IContact } from "~/types";
 
 
+
 const contacts: Array<IContact> = 
 [
     {
@@ -27,6 +28,7 @@ const contacts: Array<IContact> =
         copyMsg: 'Ссылка на аккаунт в YouTube была скопирована',
     },
 ];
+
 
 
 export default contacts;

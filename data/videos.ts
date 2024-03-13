@@ -51,6 +51,20 @@ const videos: Array<IVideo> =
         file: 'led.mp4',
         tags: ['Вертикальное', '1.5 мин', 'CupCut'],
         preview: 'led.jpg',
+    },
+
+    {
+        name: 'Видео для ЭНКА Life',
+        file: 'nk.mp4',
+        tags: ['Вертикальное', '20 сек',],
+        preview: 'nk.jpg',
+    },
+
+    {
+        name: 'Золотая антилопа. Магазин обуви',
+        file: 'zol-anti.mp4',
+        tags: ['Вертикальное', '5 сек', 'Минимализм'],
+        preview: 'zol-anti.jpg',
     }
 ];
 
