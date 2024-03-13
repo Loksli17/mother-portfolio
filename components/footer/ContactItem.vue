@@ -68,11 +68,11 @@
                         hover:text-gray-400
                         transition-all
                     " 
-                    :href="`https://${contact.link}`"
+                    :href="`${contact.link}`"
                     target="_blank"
                 >
 
-                    {{ contact.link }}
+                    {{ contact.text }}
 
                 </a>
 

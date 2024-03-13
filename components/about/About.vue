@@ -48,6 +48,7 @@
             w-640:grid-cols-[80%]
         ">
             <div class="relative">
+                
                 <img 
                     class="
                         rounded-[50px]

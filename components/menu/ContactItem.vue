@@ -14,7 +14,7 @@
 
     <a
         class="cursor-pointer" 
-        :href="`https://${contact.link}`"
+        :href="`${contact.link}`"
         target="_blank"
     >
         

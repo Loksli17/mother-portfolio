@@ -4,24 +4,24 @@ import type { IContact } from "~/types";
 const contacts: Array<IContact> = 
 [
     {
-        name   : 'Telegram',
-        link   : 't.me/Svetlana_Mi6',
-        img    : 'tg.png',
-        copyMsg: 'Аккаунт в телеграмм был скопирован',
+        name: 'Telegram',
+        link: 'https://t.me/Svetlana_Mi6',
+        img : 'tg.png',
+        text: 't.me/Svetlana_Mi6',
     },
 
     {
-        name   : 'Электронная почта',
-        link   : 'smi0504@mail.ru',
-        img    : 'mail.png',
-        copyMsg: 'Почта была скопирована',
+        name: 'Электронная почта',
+        link: 'https://mailto:smi0504@mail.ru',
+        img : 'mail.png',
+        text: 'smi0504@mail.ru'
     },
 
     {
-        name   : 'YouTube канал',
-        link   : 'clck.ru/39PsFK',
-        img    : 'youtube.png',
-        copyMsg: 'Канал на YouTube был скопирован',
+        name: 'YouTube канал',
+        link: 'https://clck.ru/39PsFK',
+        img : 'youtube.png',
+        text: 'Занимашки'
     },
 ];
 
