@@ -12,7 +12,7 @@ const contacts: Array<IContact> =
 
     {
         name: 'Электронная почта',
-        link: 'https://mailto:smi0504@mail.ru',
+        link: 'https://e.mail.ru/compose?mailto=smi0504@mail.ru',
         img : 'mail.png',
         text: 'smi0504@mail.ru'
     },
