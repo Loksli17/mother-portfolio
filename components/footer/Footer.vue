@@ -52,7 +52,7 @@
 
         <div class="
             grid 
-            grid-cols-[500px_1fr_max-content] 
+            grid-cols-[440px_1fr_max-content] 
             w-1280:grid-cols-[385px_1fr_max-content] 
             gap-10 
             w-1024:grid-cols-1
@@ -68,7 +68,10 @@
                 w-1024:p-7
             ">
 
-                <ContactItem v-for="contact in contacts" :contact="contact"/>
+                <ContactItem 
+                    v-for="contact in contacts" 
+                    :contact="contact"
+                />
 
             </div>
             

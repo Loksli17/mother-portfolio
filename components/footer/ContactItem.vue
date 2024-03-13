@@ -16,7 +16,7 @@
     <div class="
         grid 
         grid-cols-[max-content_1fr] 
-        gap-5 
+        gap-6 
         w-1024:gap-4 
         w-640:grid-cols-[max-content] 
         w-640:justify-center 
@@ -54,29 +54,27 @@
             </h4>
 
             <div class="
-                grid 
-                grid-cols-[max-content_max-content] 
+                grid  
                 content-center
                 item-center
-                gap-3
             ">
 
-                <span class="
-                    text-[19px] 
-                    w-1280:text-[18px] 
-                    w-750:text-[16px]
-                ">
-                    {{ contact.link }}
-                </span>
-
-                <div class="
-                        w-[25px] 
-                        w-1280:w-[22px] 
-                        w-750:w-[20px] 
+                <a 
+                    class="
+                        text-[19px] 
+                        w-1280:text-[18px] 
+                        w-750:text-[16px]
                         cursor-pointer
-                    " @click="copyToClipboard(contact.link, contact.copyMsg)">
-                    <img src="assets/img/copy-img.png" alt="">
-                </div>
+                        hover:text-gray-400
+                        transition-all
+                    " 
+                    :href="`https://${contact.link}`"
+                    target="_blank"
+                >
+
+                    {{ contact.link }}
+
+                </a>
 
             </div>
 

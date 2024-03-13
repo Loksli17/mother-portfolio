@@ -12,9 +12,10 @@
 
 <template>
 
-    <div
+    <a
         class="cursor-pointer" 
-        @click="copyToClipboard(contact.link, contact.copyMsg)"
+        :href="`https://${contact.link}`"
+        target="_blank"
     >
         
         <ClientOnly>
@@ -23,6 +24,6 @@
         
         </ClientOnly>
     
-    </div>
+    </a>
 
 </template>

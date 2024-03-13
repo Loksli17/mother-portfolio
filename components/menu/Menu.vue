@@ -122,13 +122,13 @@
 
             <ClientOnly>
 
-            <LinkItem 
-                @click-scroll="clickScroll" 
-                v-for="(link, index) in links" 
-                :text="link" 
-                :index="index"
-                :active-index="activeIndex" 
-            />
+                <LinkItem 
+                    @click-scroll="clickScroll" 
+                    v-for="(link, index) in links" 
+                    :text="link" 
+                    :index="index"
+                    :active-index="activeIndex" 
+                />
 
             </ClientOnly>
 
@@ -136,7 +136,7 @@
 
 
         <div class="hidden w-1280:grid ">
-            <Burger v-model:toggle="toggle"></Burger>
+            <Burger v-model:toggle="toggle"/>
         </div>
 
 
@@ -149,7 +149,10 @@
             content-center
         ">
 
-            <ContactItem v-for="contact in contacts" :contact="contact"/>
+            <ContactItem 
+                v-for="contact in contacts" 
+                :contact="contact"
+            />
 
         </div>
 
