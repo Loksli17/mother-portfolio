@@ -136,15 +136,15 @@
 
 
         <div class="hidden w-1280:grid ">
-            <Burger v-model:toggle="toggle"/>
+            <Burger class="cursor-pointer" v-model:toggle="toggle"/>
         </div>
 
 
         <div class="
             grid 
-            grid-cols-[40px_40px_40px] 
+            grid-cols-[40px_40px] 
             gap-[30px] 
-            w-1280:grid-cols-[30px_30px_30px] 
+            w-1280:grid-cols-[30px_30px] 
             w-1280:gap-[20px] 
             content-center
         ">

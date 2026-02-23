@@ -28,7 +28,9 @@
             after:w-full
             after:bg-white
             after:bottom-0
-            hover:text-[#009da7]
+            hover:after:block
+            hover:after:h-[2px]
+            text-white
             relative
         "
         :class="{

@@ -19,14 +19,6 @@ const contacts: Array<IContact> =
         text   : 'smi0504@mail.ru',
         copyMsg: 'Эл. почта была скопирована',
     },
-
-    {
-        name   : 'YouTube канал',
-        link   : 'https://clck.ru/39PsFK',
-        img    : 'youtube.png',
-        text   : 'Занимашки',
-        copyMsg: 'Ссылка на аккаунт в YouTube была скопирована',
-    },
 ];
 
 

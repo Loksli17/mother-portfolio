@@ -32,7 +32,7 @@
                 h-[3px] 
                 rounded 
                 w-full 
-                bg-black 
+                bg-white 
                 transition-all 
                 origin-top-left
             " 
@@ -44,7 +44,7 @@
             class="
                 h-[3px] 
                 rounded w-1/2 
-                bg-black 
+                bg-white 
                 transition-all
             " 
             :class="{'-translate-x-5': toggle, 'opacity-0': toggle}"
@@ -55,7 +55,7 @@
                 h-[3px] 
                 rounded 
                 w-full 
-                bg-black 
+                bg-white 
                 transition-all 
                 origin-bottom-left
             " 

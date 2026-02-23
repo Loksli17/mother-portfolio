@@ -8,11 +8,10 @@
     import Steps   from '~/components/steps/Steps.vue';
     import Footer  from '~/components/footer/Footer.vue';
     import Menu    from '~/components/menu/Menu.vue';
-    import Experience from '~/components/experience/Experience.vue';
 
     
     const root                 = ref<HTMLDivElement | null>(null);
-    const links: Array<string> = ['Приветствие', 'Обо мне', 'Примеры работы', 'Опыт',  'Процесс', 'Контакты'];
+    const links: Array<string> = ['Приветствие', 'Обо мне', 'Примеры работы', 'Процесс', 'Контакты'];
 
     provide('root', root);
 
@@ -35,7 +34,6 @@
             <Hello/>
             <About/>
             <Example/>
-            <Experience/>
             <Steps/>
             <Footer :links="links"/>
 

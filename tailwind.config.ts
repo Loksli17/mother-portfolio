@@ -25,12 +25,12 @@ export default {
             },
 
             colors: {
-                'default'   : 'rgba(146, 248, 255, 1)',
-                'default-60': 'rgba(146, 248, 255, 0.6)',
-                'default-50': 'rgba(221, 253, 255, 0.5)',
-                'default-40': 'rgba(227, 253, 255, 0.4)',
+                'default'    : 'rgba(244, 63, 87, 1)',
+                'default-60' : 'rgba(227, 126, 126,  1)',
+                'default-50' : 'rgba(246, 182, 182, 0.5)',
+                'default-120': 'rgba(199, 31, 92, 1)',
 
-                'default-hover': 'rgba(120, 229, 236, 1)',
+                'default-hover': 'rgba(191, 47, 66, 1)',
             },
 
             backgroundSize: {
