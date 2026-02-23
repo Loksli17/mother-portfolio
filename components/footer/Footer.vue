@@ -48,7 +48,7 @@
         overflow-hidden
     ">
 
-        <H2 :text="'Контакты'"></H2>
+        <H2 class="text-white" :text="'Контакты'"></H2>
 
         <div class="
             grid 
@@ -93,13 +93,15 @@
                     grid-cols-[24px_1fr] 
                     gap-2 
                     items-center
+                    text-white
                 ">
                     <img src="assets/img/pointer.png">
                     <span>г. Хабаровск, +7 МСК</span>
                 </div>
                 
                 <div class="
-                    text-[22px] 
+                    text-[22px]
+                    text-white
                     w-1280:text-[19px] 
                     w-750:text-[18px]
                 ">
@@ -110,6 +112,7 @@
                     text-[22px] 
                     w-1280:text-[19px] 
                     w-750:text-[18px]
+                    text-white
                 ">
                     Светлана Георгиевна Мишина
                 </div>
@@ -122,7 +125,7 @@
                 <ClientOnly>
 
                     <LinkItem 
-                        :text="link" 
+                        :text="link"
                         @click-scroll="scrollToElement" 
                         v-for="link in links"
                     >

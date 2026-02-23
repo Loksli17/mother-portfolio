@@ -11,7 +11,7 @@
 
     :root
     {
-        --toastify-color-info: #00F0FF;
+        --toastify-color-info: #C71F5C;
     }
 
 </style>
