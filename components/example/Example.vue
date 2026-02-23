@@ -5,7 +5,6 @@
     import Tab from '../example/Tab.vue';
 
     import BannerWrapper from '../example/Wrappers/BannerWrapper.vue';
-    import LogoWrapper   from '../example/Wrappers/LogoWrapper.vue';
     import VideoWrapper  from '../example/Wrappers/VideoWrapper.vue';
     
     import type { TabType } from '~/types';
@@ -14,9 +13,8 @@
     
     const typeToComponent: Record<TabType, any> = 
     {
-        'Banner': BannerWrapper,
+        'Advert': BannerWrapper,
         'Video' : VideoWrapper,
-        'Logo'  : LogoWrapper,
     };
 
     interface Tab
@@ -27,8 +25,7 @@
 
     const tabs: Array<Tab> = [
         {text: 'Видеоролики',       tabType: 'Video'}, 
-        {text: 'Визитки и баннеры', tabType: 'Banner'},
-        {text: 'Логотипы',          tabType: 'Logo'},
+        {text: 'Наружная реклама', tabType: 'Advert'},
     ];
     
     const activeTab    : Ref<TabType> = ref('Video');

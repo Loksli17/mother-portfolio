@@ -112,8 +112,9 @@
                     w-1280:text-[19px] 
                     w-750:text-[18px]
                     text-white
+                    font-semibold
                 ">
-                    Светлана Георгиевна Мишина
+                    БИЗНЕС-ВИДЕО
                 </div>
 
             </div>

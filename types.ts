@@ -1,4 +1,4 @@
-export type TabType = 'Video' | 'Banner' | 'Logo';
+export type TabType = 'Video' | 'Advert' ;
 
 
 
