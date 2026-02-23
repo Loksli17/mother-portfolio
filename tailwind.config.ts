@@ -27,6 +27,7 @@ export default {
             colors: {
                 'default'    : 'rgba(244, 63, 87, 1)',
                 'default-60' : 'rgba(227, 126, 126,  1)',
+                'default-55' : 'rgba(246, 182, 182, 1)',
                 'default-50' : 'rgba(246, 182, 182, 0.5)',
                 'default-120': 'rgba(199, 31, 92, 1)',
 

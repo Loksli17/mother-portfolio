@@ -55,7 +55,7 @@
         </div>
 
         <div class=" text-xl  w-1280:text-lg">
-            <p> {{ step.text }} </p>
+            <p v-html="step.text"> </p>
         </div>
 
     </div>

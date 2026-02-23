@@ -11,7 +11,7 @@
         {
             background : 'rgba(0, 0, 0, 0)', //rgba (0, 0, 0, 0)
             borderWidth: 20,
-            borderColor: '#92F8FF',
+            borderColor: '#F43F57',
         }
     );
 

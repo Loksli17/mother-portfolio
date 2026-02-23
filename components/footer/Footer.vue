@@ -32,7 +32,6 @@
 
     <div class=" 
         border-t-white 
-        border-t-8
         p-[80px] 
 
         w-1024:py-[65px] 

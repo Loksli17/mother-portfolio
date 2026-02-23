@@ -18,9 +18,10 @@
         w-1024:px-[50px]
         w-640:px-[30px]
         grid 
-        gap-[120px]
+        gap-[160px]
         overflow-hidden
         w-1280:gap-[50px]
+        bg-default-50
         
         w-1024:py-[100px]
         w-640:py-[65px]
@@ -70,7 +71,7 @@
 
         <Circle 
             :size="280" 
-            :border-color="'#009CA6'"
+            :border-color="'#C71F5C'"
             class="
                 absolute
                 top-[-230px] 

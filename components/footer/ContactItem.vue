@@ -26,7 +26,7 @@
         <div class="
             p-3 
             w-1024:p-2 
-            bg-default-60 
+            bg-default-55 
             rounded-md 
             w-1024:rounded 
             w-max
@@ -84,7 +84,7 @@
                         px-2 
                         cursor-pointer 
                         rounded 
-                        bg-default-60 
+                        bg-default-55
                         hover:bg-default 
                         transition-all
                         text-sm
