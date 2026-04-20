@@ -16,12 +16,6 @@
 
     <div class="
         min-h-screen 
-        relative
-    ">
-    </div>
-
-    <!-- <div class="
-        min-h-screen 
         grid grid-cols-[1fr_850px] 
 
         gap-[50px]
@@ -30,6 +24,7 @@
         
         w-1280:grid-cols-1 
         relative
+        overflow-hidden
     ">
 
         <div class=" 
@@ -69,14 +64,20 @@
 
                 <div>
 
-                    <H3 :text="'Здравствуйте, меня зовут'"> </H3>
-                    <H3 :text="'Светлана Мишина'" class="text-[#009CA6]"> </H3>
+                    <H3 :text="'Здравствуйте, мы'"> </H3>
+                    <H3 :text="'БИЗНЕС ВИДЕО'" class="text-default-120"> </H3>
 
                 </div>
 
-                <P :text="
-                    'Я графический дизайнер и видеомонтажер с большим опытом создания видеороликов и рекламной продукции для бизнеса'
-                "></P>
+                <div>
+                    <P :text="
+                        'Студия производства наружной и видео рекламы.'
+                    "></P>
+
+                    <P :text="
+                        'Более 20 лет помогаем привлекать клиентов и увеличивать продажи'
+                    "></P>
+                </div>
 
                 <A 
                     :href="contacts[0].link" 
@@ -124,13 +125,26 @@
 
             <div class="relative">
 
-                <img class="
+                <!-- todo другая структура нужна -->
+
+                <div class="
+                        rounded-[120px] 
+                        w-1520:rounded-[90px] 
+                        w-1280:rounded-[60px] 
+                        w-1024:rounded-[40px]
+                        bg-default-30
+                        h-[600px]
+                    " >
+
+                </div>
+                
+                <!-- <img class="
                         rounded-[120px] 
                         w-1520:rounded-[90px] 
                         w-1280:rounded-[60px] 
                         w-1024:rounded-[40px]
                         bg-[#E1FDFF]
-                    " src="assets/img/women1.png" alt="">
+                    " src="assets/img/women1.png" alt=""> -->
 
                 <PointsBox class="absolute bottom-[-58px] left-[120px] -z-10 w-1280:hidden" :cols-amount="8"
                     :rows-amount="4" :opacity="0.6">
@@ -141,13 +155,13 @@
         </div>
 
         <Circle :size="360" class="
-                bottom-[-220px] 
-                right-[-140px] 
-                w-1024:right-[-285px] 
-                w-1024:bottom-[-160px]
-                w-1024:opacity-30
-            " />
+            bottom-[-220px] 
+            right-[-140px] 
+            w-1024:right-[-285px] 
+            w-1024:bottom-[-160px]
+            w-1024:opacity-30
+        " />
 
-    </div> -->
+    </div>
 
 </template>

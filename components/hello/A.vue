@@ -20,7 +20,8 @@
             bg-default 
             py-[12px] 
             px-[45px] 
-            text-[32px] 
+            text-[32px]
+            text-white
             font-bold
             rounded-[10px]
             hover:bg-default-hover

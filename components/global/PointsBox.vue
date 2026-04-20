@@ -9,7 +9,7 @@
             opacity   ?: number,
         }>(),
         {
-            background: '#92F8FF',
+            background: 'rgba(255, 163, 163, 0.6)',
             opacity   : 1,
         }
     );
