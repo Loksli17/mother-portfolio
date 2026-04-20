@@ -52,7 +52,7 @@
 
         </div>
 
-        <div class="p-7 grid gap-5 w-1024:p-4 bg-default rounded-b-[10px] w-full">
+        <div class="p-7 grid gap-8 w-1024:p-4 bg-default-55 rounded-b-[10px] w-full">
 
             <div class=" text-[25px] w-1024:text-[20px]">
                 {{ banner.name }}
@@ -76,6 +76,17 @@
                 >
                     {{ tag }}
                 </div>
+
+            </div>
+
+            <div class="grid justify-end">
+
+                <span class=" font-medium
+                    text-[22px]
+                    w-1024:text-[19px]
+                ">
+                    {{ banner.price }} руб
+                </span>
 
             </div>
 

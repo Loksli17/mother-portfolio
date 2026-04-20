@@ -24,6 +24,7 @@
             h-max
             cursor-pointer
             transition-all
+            
             after:absolute
             after:w-full
             after:bg-white

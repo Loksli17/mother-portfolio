@@ -18,17 +18,29 @@
     <div 
         class=" 
             text-[28px] 
-            cursor-pointer 
-            font-medium
+            text-white
+            cursor-pointer
             
             w-1450:text-[24px]
             w-1024:text-[21px]
             w-750:text-[19px]
+
+            relative
+
+            after:absolute
+            after:w-full  
+            after:bg-white 
+            after:bottom-0
+            after:left-0
+
+            hover:after:block
+            hover:after:h-[2px]
         "
         :class="
         {
-            'text-[#009DA7]': activeTab == tabType, 
-            'font-semibold'   : activeTab == tabType
+            'after:block'  : activeTab == tabType,
+            'after:h-[2px]': activeTab == tabType,
+            'font-semibold': activeTab == tabType
         }"
     > 
         {{ text }}
