@@ -1,11 +1,9 @@
 
 <script setup lang="ts">
 
-    import H2       from '../global/H2.vue';
-    import H3       from '../global/H3.vue';
-    import P        from '../global/P.vue';
-    import tools    from '~/data/tools';
-    import ToolItem from './ToolItem.vue';
+    import H2 from '../global/H2.vue';
+    import H3 from '../global/H3.vue';
+    import P  from '../global/P.vue';
 
 </script>
 
@@ -13,7 +11,9 @@
 
 <template>
 
-    <div class=" 
+    <div class="bg-default-50 pt-[40px]"></div>
+
+    <!-- <div class=" 
         bg-default-50
         grid
         grid-cols-[700px_1fr]
@@ -197,6 +197,6 @@
         "
         />
 
-    </div>
+    </div> -->
 
 </template>

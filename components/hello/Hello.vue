@@ -16,6 +16,12 @@
 
     <div class="
         min-h-screen 
+        relative
+    ">
+    </div>
+
+    <!-- <div class="
+        min-h-screen 
         grid grid-cols-[1fr_850px] 
 
         gap-[50px]
@@ -142,6 +148,6 @@
                 w-1024:opacity-30
             " />
 
-    </div>
+    </div> -->
 
 </template>
